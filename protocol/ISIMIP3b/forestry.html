@@ -1,0 +1,2294 @@
+<html>
+    <head>
+        <title>ISIMIP3b &ndash; Regional forests</title>
+
+        <style>
+            @media screen {
+                html {
+                    background-color: silver;
+                }
+                body {
+                    background-color: white;
+                    box-shadow: 0 0 10px #666;
+                    width: 60rem;
+                    margin: 0 auto;
+                    padding: 2rem;
+                }
+            }
+            @media print {
+                body {
+                    zoom: 80%;
+                    margin: 20mm;
+
+                    /* fixex colors in printing */
+                    -webkit-print-color-adjust: exact;
+                }
+                h2 {
+                    break-before: always;
+                }
+            }
+            body {
+                font-family: Helvetica, Arial, sans;
+                font-size: 12pt;
+                line-height: 1.25rem;
+            }
+            h1 {
+                font-size: 2rem;
+                line-height: 2rem;
+                margin: 2rem 0;
+            }
+            h2 {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            h3 {
+                margin: 1rem 0;
+            }
+            h5 {
+                margin: 0;
+                font-size: 1rem;
+            }
+            a, a:hover, a:visited, a:focus {
+                color: #0681be;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+            table, th, td {
+                border: 1px solid #4A4A4A;
+            }
+            th, td {
+                padding: 0.8rem;
+                font-size: 0.7em;
+            }
+            caption {
+                text-align: left;
+                margin-bottom: 0.5em;
+                font-size: small;
+            }
+            thead {
+                background-color: #4A4A4A;
+                color: white;
+            }
+            table .red {
+                background-color: #E5B8B7;
+            }
+            table .gray {
+                background-color: #e5e5e5;
+            }
+            table .green {
+                background-color: #D9EAD3;
+            }
+            code {
+                font-size: 0.8rem;
+                color: #333;
+                background-color: #e5e5e5;
+                border-radius: 3px;
+                padding: 0 3px;
+            }
+            header {
+                font-size: small;
+                height: 4rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid silver;
+            }
+            header img.logo {
+                display: block;
+                height: 4rem;
+            }
+            header, header a, header a:hover, header a:visited, header a:focus {
+                color: silver;
+            }
+            header .right {
+                float: right;
+                text-align: right;
+            }
+            footer {
+                text-align: center;
+                margin-top: 2rem;
+                padding-top: 1rem;
+                border-top: 1px solid silver;
+            }
+            pre {
+                background-color: #e5e5e5;
+                padding: 1rem;
+                white-space: pre-wrap;
+                font-size: 0.8rem;
+            }
+            pre code {
+                font-size: smaller;
+                background-color: transparent;
+                padding: 0;
+            }
+            .toc {
+                width: 50%;
+                border: 1px solid silver;
+            }
+            .toc ul {
+                margin-top: 0.25rem;
+                padding-left: 2rem;
+            }
+            .toc > ul {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+            }
+            .toc li {
+                margin-bottom: 0.25rem;
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="right">
+                <p>
+                    Last updated: 14 February 2020
+                </p>
+                <p>
+                    Commit hash: <a href="https://github.com/ISI-MIP/isimip-protocol-3/commit/5c7b644a2158d7ad6602e7f061d870f5b3cf7e0c">5c7b644a2158d7ad6602e7f061d870f5b3cf7e0c</a>
+                </p>
+            </div>
+            <div>
+                <a href="https://www.isimip.org">
+                    <img class="logo" src="https://www.isimip.org/static/images/logo-white.png" alt="ISIMIP logo">
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <h1>ISIMIP3b simulation protocol - Regional forests</h1>
+<div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#general-concept">General concept</a></li>
+</ul>
+</li>
+<li><a href="#scenario">Scenario</a></li>
+<li><a href="#input-data">Input data</a><ul>
+<li><a href="#climate-forcing-data">Climate forcing data</a></li>
+<li><a href="#landuse-data">Landuse data</a></li>
+</ul>
+</li>
+<li><a href="#output-data">Output data</a><ul>
+<li><a href="#output-variables">Output variables</a></li>
+<li><a href="#species">Species</a></li>
+<li><a href="#forest-stands">Forest stands</a></li>
+</ul>
+</li>
+<li><a href="#repoting-model-results">Repoting model results</a><ul>
+<li><a href="#general-notes">General Notes</a></li>
+<li><a href="#format-for-gridded-data">Format for gridded data</a></li>
+<li><a href="#format-for-non-gridded-data">Format for non-gridded data</a></li>
+<li><a href="#variables-with-layers">Variables with layers</a></li>
+<li><a href="#time-intervals">Time intervals</a></li>
+<li><a href="#submission-of-simulations">Submission of simulations</a></li>
+<li><a href="#documentation-of-models-and-experiments">Documentation of models and experiments</a></li>
+<li><a href="#time-slices-for-individual-files">Time slices for individual files</a></li>
+<li><a href="#file-names">File names</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="introduction">Introduction</h2>
+<h3 id="general-concept">General concept</h3>
+<p>ISIMIP provides a framework for the collation of a consistent set of climate impact data across sectors and scales. This framework will serve as a basis for model evaluation and improvement, allowing for improved estimates of the biophysical and socio-economic impacts of climate change at different levels of global warming. It also provides a unique opportunity for considering interactions between climate change impacts across sectors through consistent scenarios.</p>
+<p>ISIMIP is intended to be structured in successive rounds, each having its own focus topics and focus regions that inform the scenario design. The main components of the ISIMIP framework are:</p>
+<ul>
+<li>A common set of climate and other input data which will be distributed via a central database;</li>
+<li>A common modelling protocol to ensure consistency across sectors and scales in terms of data, format and scenario set-up;</li>
+<li>A central archive where the output data will be collected and made available to the scientific community.</li>
+</ul>
+<h2 id="scenario">Scenario</h2>
+<table id="tbl:scenario" class="tablenos">
+    <caption>
+      Table 1: Scenario set-ups: Each experiment is specified by the climate forcing (CF) and the Direct Human Forcing (DHF).
+    </caption>
+    <thead>
+        <tr>
+            <th style="width: 10%;">Experiment</th>
+            <th style="width: 25%;">Short description</th>
+            <th style="width: 10%;">Input</th>
+
+            <th style="width: 10%;">Pre-industrial</th>
+            <th style="width: 10%;">Historical</th>
+            <th style="width: 10%;">Future</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">
+                <strong>pre-industrial control</strong>
+<br />histsoc            </td>
+            <td>
+                <strong>CF:</strong> no climate change, pre-industrial CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td class="gray">
+                    <strong>picontrol</strong>
+                </td>
+
+                <td class="gray">
+                    <strong>picontrol</strong>
+                </td>
+
+                <td class="red">
+                    <strong>picontrol</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> varying management until 2015, then fixed at 2015 levels thereafter
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+                <td class="gray">
+                    <strong>1860soc</strong>
+                </td>
+
+                <td class="gray">
+                    <strong>histsoc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>2015soc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>pre-industrial control</strong>
+<br />2005soc            </td>
+            <td>
+                <strong>CF:</strong> no climate change, pre-industrial CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td class="gray">
+                    <strong>picontrol</strong>
+                </td>
+
+                <td class="gray">
+                    <strong>picontrol</strong>
+                </td>
+
+                <td class="red">
+                    <strong>picontrol</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> fixed at 2015 levels for all periods
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+                <td class="gray">
+                    <strong>2015soc</strong>
+                </td>
+
+                <td class="gray">
+                    <strong>2015soc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>2015soc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>pre-industrial control</strong>
+<br />nosoc            </td>
+            <td>
+                <strong>CF:</strong> no climate change, pre-industrial CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td class="gray">
+                    <strong>picontrol</strong>
+                </td>
+
+                <td class="gray">
+                    <strong>picontrol</strong>
+                </td>
+
+                <td class="red">
+                    <strong>picontrol</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> no direct human influences except for varying land use changes up to 2015
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+                <td class="gray">
+                    <strong>nosoc</strong>
+                </td>
+
+                <td class="gray">
+                    <strong>nosoc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>nosoc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>RCP2.6</strong>
+<br />histsoc            </td>
+            <td>
+                <strong>CF:</strong> RCP2.6 climate &amp; CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td rowspan="2">
+                    pre-industrial control experiment (histsoc)
+                </td>
+
+                <td class="gray">
+                    <strong>historical</strong>
+                </td>
+
+                <td class="red">
+                    <strong>rcp26</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> varying management until 2015, then fixed at 2015 levels thereafter
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+
+                <td class="gray">
+                    <strong>histsoc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>2015soc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>RCP2.6</strong>
+<br />2005soc            </td>
+            <td>
+                <strong>CF:</strong> RCP2.6 climate &amp; CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td rowspan="2">
+                    pre-industrial control experiment (2005soc)
+                </td>
+
+                <td class="gray">
+                    <strong>historical</strong>
+                </td>
+
+                <td class="red">
+                    <strong>rcp26</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> fixed at 2015 levels for all periods
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+
+                <td class="gray">
+                    <strong>2015soc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>2015soc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>RCP2.6</strong>
+<br />nosoc            </td>
+            <td>
+                <strong>CF:</strong> RCP2.6 climate &amp; CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td rowspan="2">
+                    pre-industrial control experiment (nosoc)
+                </td>
+
+                <td class="gray">
+                    <strong>historical</strong>
+                </td>
+
+                <td class="red">
+                    <strong>rcp26</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> no direct human influences except for varying land use changes up to 2015
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+
+                <td class="gray">
+                    <strong>nosoc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>nosoc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>RCP2.6</strong>
+<br />2015co2            </td>
+            <td>
+                <strong>CF:</strong> RCP2.6 climate, CO2 after 2015 fixed at 2015 levels
+            </td>
+            <td>
+                Climate
+            </td>
+
+
+
+                <td rowspan="2">
+                    pre-industrial control experiment (2005soc)
+                </td>
+
+                <td rowspan="2">
+                    RCP2.6 experiment (2005soc)
+                </td>
+
+                <td class="red">
+                    <strong>rcp26 2015co2</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> fixed at 2015 levels for all periods
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+
+
+                <td class="red">
+                    <strong>2015soc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>RCP8.5</strong>
+<br />histsoc            </td>
+            <td>
+                <strong>CF:</strong> RCP2.6 climate &amp; CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td rowspan="2">
+                    pre-industrial control experiment (histsoc)
+                </td>
+
+                <td class="gray">
+                    <strong>historical</strong>
+                </td>
+
+                <td class="red">
+                    <strong>rcp85</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> varying management until 2015, then fixed at 2015 levels thereafter
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+
+                <td class="gray">
+                    <strong>histsoc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>2015soc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>RCP8.5</strong>
+<br />2005soc            </td>
+            <td>
+                <strong>CF:</strong> RCP2.6 climate &amp; CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td rowspan="2">
+                    pre-industrial control experiment (2005soc)
+                </td>
+
+                <td class="gray">
+                    <strong>historical</strong>
+                </td>
+
+                <td class="red">
+                    <strong>rcp85</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> fixed at 2015 levels for all periods
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+
+                <td class="gray">
+                    <strong>2015soc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>2015soc</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <strong>RCP8.5</strong>
+<br />nosoc            </td>
+            <td>
+                <strong>CF:</strong> RCP2.6 climate &amp; CO2
+            </td>
+            <td>
+                Climate &amp; CO2
+            </td>
+
+
+
+                <td rowspan="2">
+                    pre-industrial control experiment (nosoc)
+                </td>
+
+                <td class="gray">
+                    <strong>historical</strong>
+                </td>
+
+                <td class="red">
+                    <strong>rcp85</strong>
+                </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>DHF:</strong> no direct human influences except for varying land use changes up to 2015
+            </td>
+            <td>
+                Human &amp; LU
+            </td>
+
+
+
+
+                <td class="gray">
+                    <strong>nosoc</strong>
+                </td>
+
+                <td class="red">
+                    <strong>nosoc</strong>
+                </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<table id="tbl:climate_scenario" class="tablenos" style="width: 66%;">
+    <caption>
+      Table 2: Climate scenario specifiers.
+    </caption>
+    <thead>
+        <th style="width: 20%;">Specifier</th>
+        <th style="width: 80%;">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>picontrol</strong></td>
+            <td>Pre-industrial climate and 286ppm CO2 concentration. The climate data for the entire period (1661-2299) are unique – no (or little) recycling of data has taken place.</td>
+        </tr>
+        <tr>
+            <td><strong>historical</strong></td>
+            <td>Historical climate and CO2 concentration.</td>
+        </tr>
+        <tr>
+            <td><strong>rcp26</strong></td>
+            <td>Future climate and CO2 concentration from RCP2.6.</td>
+        </tr>
+        <tr>
+            <td><strong>rcp85</strong></td>
+            <td>Future climate and CO2 concentration from RCP8.5.</td>
+        </tr>
+        <tr>
+            <td><strong>2015co2</strong></td>
+            <td>CO2 concentration fixed at 2005 levels at 378.81ppm.</td>
+        </tr>
+    </tbody>
+</table>
+
+<table id="tbl:soc_forcing" class="tablenos" style="width: 66%;">
+    <caption>
+      Table 3: Socio-economic scenario specifiers.
+    </caption>
+    <thead>
+        <th style="width: 20%;">Specifier</th>
+        <th style="width: 80%;">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>histsoc</strong></td>
+            <td>Varying historical land use, nitrogen deposition and fertilizer input.</td>
+        </tr>
+        <tr>
+            <td><strong>2015soc</strong></td>
+            <td>Fixed year-2015 land use, nitrogen deposition and fertilizer input.</td>
+        </tr>
+        <tr>
+            <td><strong>nosoc</strong></td>
+            <td>No direct human influences except for varying land use changes up to 2015.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="input-data">Input data</h2>
+<h3 id="climate-forcing-data">Climate forcing data</h3>
+<table id="tbl:climate_forcing" class="tablenos">
+    <caption>
+      Table 4: Climate and climate-related forcing data.
+    </caption>
+    <thead>
+        <th style="width: 15%;">Specifier</th>
+        <th style="width: 15%;">Title</th>
+        <th style="width: 10%;">Years</th>
+        <th style="width: 15%;">Resolution</th>
+        <th style="width: 5%;">Bias target</th>
+        <th style="width: 40%;">Comments</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>gfdl-esm4</strong></td>
+            <td>GFDL-ESM4</td>
+            <td>1601-2100</td>
+            <td>0.5° grid Land + Ocean</td>
+            <td>w5e5</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>mpi-esm1-2-hr</strong></td>
+            <td>MPI-ESM1-2-HR</td>
+            <td>1601-2100</td>
+            <td>0.5° grid Land + Ocean</td>
+            <td>w5e5</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>mri-esm2-0</strong></td>
+            <td>MRI-ESM2-0</td>
+            <td>1601-2100</td>
+            <td>0.5° grid Land + Ocean</td>
+            <td>w5e5</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>ukesm1-0-ll</strong></td>
+            <td>UKESM1-0-LL</td>
+            <td>1601-2100</td>
+            <td>0.5° grid Land + Ocean</td>
+            <td>w5e5</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>ipsl-cm6a-lr</strong></td>
+            <td>IPSL-CM6A-LR</td>
+            <td>1601-2100</td>
+            <td>0.5° grid Land + Ocean</td>
+            <td>w5e5</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<table id="tbl:climate_variables" class="tablenos">
+    <caption>
+      Table 5: Climate forcing variables.
+    </caption>
+    <thead>
+        <th style="width: 12%;">Specifier</th>
+        <th style="width: 12%;">Long name</th>
+        <th style="width: 12%;">Unit (NetCDF format)</th>
+        <th style="width: 12%;">Spatial Resolution</th>
+        <th style="width: 12%;">Temporal Resolution</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <strong>hurs</strong>
+            </td>
+            <td>Near-Surface Relative Humidity</td>
+            <td>%</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>huss</strong>
+            </td>
+            <td>Near-Surface Specific Humidity</td>
+            <td>kg kg-1</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>pr</strong>
+            </td>
+            <td>Precipitation</td>
+            <td>kg m-2 s-1</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>prsn</strong>
+            </td>
+            <td>Snowfall Flux</td>
+            <td>kg m-2 s-1</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>ps</strong>
+            </td>
+            <td>Surface Air Pressure</td>
+            <td>Pa</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>rlds</strong>
+            </td>
+            <td>Surface Downwelling Longwave Radiation</td>
+            <td>W m-2</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>rsds</strong>
+            </td>
+            <td>Surface Downwelling Shortwave Radiation</td>
+            <td>W m-2</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>sfcwind</strong>
+            </td>
+            <td>Near-Surface Wind Speed</td>
+            <td>m s-1</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>tas</strong>
+            </td>
+            <td>Near-Surface Air Temperature</td>
+            <td>K</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>tasmax</strong>
+            </td>
+            <td>Daily Maximum Near-Surface Air Temperature</td>
+            <td>K</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+        <tr>
+            <td>
+                <strong>tasmin</strong>
+            </td>
+            <td>Daily Minimum Near-Surface Air Temperature</td>
+            <td>K</td>
+            <td>0.5° grid</td>
+            <td>daily, monthly</td>
+        </tr>
+    </tbody>
+</table>
+
+<table id="tbl:bias_correction" class="tablenos">
+    <caption>
+      Table 6: Bias correction specifiers.
+    </caption>
+    <thead>
+        <th style="width: 20%;">Specifier</th>
+        <th style="width: 80%;">Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>nobasd</strong></td>
+            <td>Indicates that no bias correction was performed on the climate data (e.g. ocean data).</td>
+        </tr>
+        <tr>
+            <td><strong>localbc</strong></td>
+            <td>Refers to local data from weather stations used for the bias-correction in e.g. the forest sector.</td>
+        </tr>
+        <tr>
+            <td><strong>w5e5</strong></td>
+            <td>Refers to W5E5 data used for the bias-correction globally on a 0.5° grid.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="landuse-data">Landuse data</h3>
+<table>
+    <caption>
+        Table 7: Output variables for the regional forests sector.
+    </caption>
+    <thead>
+        <th style="width: 20%;">Long name</th>
+        <th style="width: 20%;">Specifier</th>
+        <th style="width: 10%;">Unit (NetCDF format)</th>
+        <th style="width: 10%;">Spatial Resolution</th>
+        <th style="width: 10%;">Temporal Resolution</th>
+        <th style="width: 30%;">Comments</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>Landuse total (histsoc_landuse-totals_annual_1861_2018.nc)</strong>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>cropland_total</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>total cropland in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>cropland_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>all of the rainfed cropland in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>cropland_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>all of the irrigated cropland in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>pastures</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of pastures, both  managed or rangeland, in a grid cell</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>Landuse 5 crops (histsoc_landuse-5crops_annual_1861_2018.nc)</strong>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3ann_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C3 annual crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3ann_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C3 annual crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3per_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C3 perennial crops  in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3per_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C3 perennial crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3nfx_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C3 nitrogen-fixing crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3nfx_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C3 nitrogen-fixing crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c4ann_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C4 annual crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c4ann_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C4 annual crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c4per_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C4 perennial crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c4per_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C4 perennial crops in a grid cell</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>Landuse 15 crops (histsoc_landuse-15crops_annual_1861_2018.nc)</strong>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c4per_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C4 perennial crops in a grid cell, currently this covers only sugarcane</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c4per_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C4  perennial crops in a grid cell, currently this covers only sugarcane</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>maize_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed maize in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>maize_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated maize in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_groundnut_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed oil crops (groundnut) in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_groundnut_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated oil crops (groundnut) in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_rapeseed_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed oil crops (groundnut) in a grid cel</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_rapeseed_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated oil crops (groundnut) in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_soybean_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed oil crops (soybean) in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_soybean_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated oil crops (soybean) in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_sunflower_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed oil crops (sunflower) in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>oil_crops_sunflower_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated oil crops (sunflower) in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>pulses_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed pulses in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>pulses_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated pulses in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>temperate_cereals_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed temperate cereals in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>temperate_cereals_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated temperate cereals in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>temperate_roots_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed temperate roots in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>temperate_roots_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of  irrigated temperate roots in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>tropical_cereals_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed tropical cereals in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>tropical_cereals_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated in tropical cereals a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>tropical_roots_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed tropical roots in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>tropical_roots_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated tropical roots in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>others_c3ann_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C3 annual crops not covered by the above in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>others_c3ann_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated  rainfed C3 annual crops not covered by the above in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3per_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C3 perennial crops in a grid cell, these have not been further downscaled from the &#34;5 crops&#34; data</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>c3per_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C3 perennial crops in a grid cell, these have not been further downscaled from the &#34;5 crops&#34; data</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>others_c3nfx_rainfed</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rainfed C3 N-fixing crops not covered by the above in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>others_c3nfx_irrigated</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of irrigated C3 N-fixing crops not covered by the above in a grid cell</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>Pastures (histsoc_landuse-pastures_annual_1861_2018.nc)</strong>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>managed_pastures</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of managed pastures in a grid cell</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>rangeland</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of rangeland in a grid cell</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>Urban areas (histsoc_landuse-urbanareas_annual_1861_2018.nc)</strong>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>urbanareas</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>share of urban areas in a grid cell</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>n-fertilizer-5crops (histsoc_n-fertilizer-5crops_annual_1861_2018.nc)</strong>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>fertl_c3ann</strong>
+            </td>
+            <td>1</td>
+            <td>0.5° grid</td>
+            <td>annual</td>
+            <td>deposition of N through fertilizer on cropland with C3 annual crops</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>fertl_c3per</strong>
+            </td>
+            <td>kg ha-1 yr-1</td>
+            <td>0.5° grid</td>
+            <td>seasonal</td>
+            <td>deposition of N through fertilizer on cropland with C3 perennial crops</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>fertl_c3nfx</strong>
+            </td>
+            <td>kg ha-1 yr-1</td>
+            <td>0.5° grid</td>
+            <td>seasonal</td>
+            <td>deposition of N through fertilizer on cropland with C3 N-fixing crops</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>fertl_c4ann</strong>
+            </td>
+            <td>kg ha-1 yr-1</td>
+            <td>0.5° grid</td>
+            <td>seasonal</td>
+            <td>deposition of N through fertilizer on cropland with C4 annual crops</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <strong>fertl_c4per</strong>
+            </td>
+            <td>kg ha-1 yr-1</td>
+            <td>0.5° grid</td>
+            <td>seasonal</td>
+            <td>deposition of N through fertilizer on cropland with C4 perennial crops</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="output-data">Output data</h2>
+<h3 id="output-variables">Output variables</h3>
+<table>
+    <caption>
+        Table 8: Output variables for the regional forests sector.
+    </caption>
+    <thead>
+        <th style="width: 20%;">Long name</th>
+        <th style="width: 20%;">Specifier</th>
+        <th style="width: 10%;">Unit (NetCDF format)</th>
+        <th style="width: 10%;">Dimensions</th>
+        <th style="width: 5%;">Spatial Resolution</th>
+        <th style="width: 5%;">Temporal Resolution</th>
+        <th style="width: 30%;">Comments</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>Essential outputs</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Mean DBH</td>
+            <td>
+                <strong>dbh-&lt;species&gt;</strong>
+            </td>
+            <td>cm</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mean DBH of 100 highest trees</td>
+            <td>
+                <strong>dbhdomhei</strong>
+            </td>
+            <td>cm</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>100 highest trees per hectare.</td>
+        </tr>
+        <tr>
+            <td>Stand Height</td>
+            <td>
+                <strong>hei-&lt;species&gt;</strong>
+            </td>
+            <td>ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>For models including natural regeneration this variable may not make sense, please report domhei.</td>
+        </tr>
+        <tr>
+            <td>Dominant Height</td>
+            <td>
+                <strong>domhei</strong>
+            </td>
+            <td>m2 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>Mean height of the 100 highest trees per hectare.</td>
+        </tr>
+        <tr>
+            <td>Stand Density</td>
+            <td>
+                <strong>density-&lt;species&gt;</strong>
+            </td>
+            <td>m2 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Basal Area</td>
+            <td>
+                <strong>ba-&lt;species&gt;</strong>
+            </td>
+            <td>m2 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Volume of Dead Trees</td>
+            <td>
+                <strong>mort-&lt;species&gt;</strong>
+            </td>
+            <td>m3 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Harvest by DBH-class</td>
+            <td>
+                <strong>harv-&lt;species&gt;</strong>
+            </td>
+            <td>m3 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>DBH class resolution: Either DBH classes or total</td>
+        </tr>
+        <tr>
+            <td>Remaining stem number after disturbance and management by dbh class</td>
+            <td>
+                <strong>stemno-&lt;species&gt;</strong>
+            </td>
+            <td>ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>DBH class resolution: Either DBH classes or total</td>
+        </tr>
+        <tr>
+            <td>Stand Volume</td>
+            <td>
+                <strong>vol-&lt;species&gt;</strong>
+            </td>
+            <td>m3 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in Vegetation</td>
+            <td>
+                <strong>cveg-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As kg carbon*m-2</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in aboveground vegetation biomass</td>
+            <td>
+                <strong>cvegag-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As kg carbon*m-2</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in belowground vegetation biomass</td>
+            <td>
+                <strong>cvegbg-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As kg carbon*m-2</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in Litter Pool</td>
+            <td>
+                <strong>clitter-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As kg carbon*m-2, Info for each individual pool.</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in Soil Pool</td>
+            <td>
+                <strong>csoil-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As kg carbon*m-2, Info for each individual soil layer.</td>
+        </tr>
+        <tr>
+            <td>Tree age by dbh class</td>
+            <td>
+                <strong>age-&lt;species&gt;</strong>
+            </td>
+            <td>yr</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>DBH class resolution: Either DBH classes or total</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass Flux out of Atmosphere due to Gross Primary Production on Land</td>
+            <td>
+                <strong>gpp-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>As kg carbon*m-2*s-1</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass Flux out of Atmosphere due to Net Primary Production on Land</td>
+            <td>
+                <strong>npp-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>As kg carbon*m-2*s-1</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass Flux into Atmosphere due to Autotrophic (Plant) Respiration on Land</td>
+            <td>
+                <strong>ra-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>As kg carbon*m-2*s-1</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass Flux into Atmosphere due to Heterotrophic Respiration on Land</td>
+            <td>
+                <strong>rh-total</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>As kg carbon*m-2*s-1</td>
+        </tr>
+        <tr>
+            <td>Net Ecosystem Exchange</td>
+            <td>
+                <strong>nee-total</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>As kg carbon*m-2*s-1</td>
+        </tr>
+        <tr>
+            <td>Mean Annual Increment</td>
+            <td>
+                <strong>mai-&lt;species&gt;</strong>
+            </td>
+            <td>m3 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fraction of absorbed photosynthetically active radiation</td>
+            <td>
+                <strong>fapar-&lt;species&gt;</strong>
+            </td>
+            <td>%</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>Value between 0 and 100.</td>
+        </tr>
+        <tr>
+            <td>Leaf Area Index</td>
+            <td>
+                <strong>lai-&lt;species&gt;</strong>
+            </td>
+            <td>1</td>
+            <td></td>
+            <td>stand and 0.5° grid average</td>
+            <td>monthly</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Species composition</td>
+            <td>
+                <strong>species-&lt;species&gt;</strong>
+            </td>
+            <td>%</td>
+            <td></td>
+            <td>per ha</td>
+            <td>monthly</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Evapotranspiration</td>
+            <td>
+                <strong>evap</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>Sum of transpiration, evaporation, interception and sublimation.</td>
+        </tr>
+        <tr>
+            <td>Evaporation from Canopy (interception)</td>
+            <td>
+                <strong>intercep-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>The canopy evaporation+sublimation (if present in model).</td>
+        </tr>
+        <tr>
+            <td>Water Evaporation from Soil</td>
+            <td>
+                <strong>esoil</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>Includes sublimation.</td>
+        </tr>
+        <tr>
+            <td>Transpiration</td>
+            <td>
+                <strong>trans-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Soil moisture for each layer</td>
+            <td>
+                <strong>soilmoist</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>0.5° grid</td>
+            <td>daily</td>
+            <td>If possible, please provide soil moisture for all depth layers (i.e. 3D-field), and indicate depth in m. Otherwise, provide soil moisture of entire column.</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="gray">
+                <strong>Optional outputs</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>Removed stem numbers by size class by natural mortality</td>
+            <td>
+                <strong>mortstemno-&lt;species&gt;</strong>
+            </td>
+            <td>ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As trees per hectare.</td>
+        </tr>
+        <tr>
+            <td>Removed stem numbers by size class by management</td>
+            <td>
+                <strong>harvstemno-&lt;species&gt;</strong>
+            </td>
+            <td>ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As trees per hectare.</td>
+        </tr>
+        <tr>
+            <td>Volume of disturbance damage</td>
+            <td>
+                <strong>dist-&lt;dist-name&gt;</strong>
+            </td>
+            <td>m3 ha-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nitrogen of annual Litter</td>
+            <td>
+                <strong>nlit-&lt;species&gt;</strong>
+            </td>
+            <td>g m-2 a-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As g Nitrogen m-2 a-1</td>
+        </tr>
+        <tr>
+            <td>Nitrogen in Soil</td>
+            <td>
+                <strong>nsoil-total</strong>
+            </td>
+            <td>g m-2 a-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>As g Nitrogen m-2 a-1</td>
+        </tr>
+        <tr>
+            <td>Net Primary Production allocated to leaf biomass</td>
+            <td>
+                <strong>nppleaf-&lt;species&gt;</strong>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Net Primary Production allocated to fine root biomass</td>
+            <td>
+                <strong>npproot-&lt;species&gt;</strong>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Net Primary Production allocated to above ground wood biomass</td>
+            <td>
+                <strong>nppagwood-&lt;species&gt;</strong>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Net Primary Production allocated to below ground wood biomass</td>
+            <td>
+                <strong>nppbgwood-&lt;species&gt;</strong>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Root autotrophic respiration</td>
+            <td>
+                <strong>rr-&lt;pft&gt;</strong>
+            </td>
+            <td>kg m-2 s-1</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily</td>
+            <td>As kg carbon*m-2*s-1</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in Leaves</td>
+            <td>
+                <strong>cleaf-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in Wood</td>
+            <td>
+                <strong>cwood-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>Including sapwood and hardwood.</td>
+        </tr>
+        <tr>
+            <td>Carbon Mass in Roots</td>
+            <td>
+                <strong>croot-&lt;species&gt;</strong>
+            </td>
+            <td>kg m-2</td>
+            <td></td>
+            <td>stand</td>
+            <td>annual</td>
+            <td>Including fine and coarse roots.</td>
+        </tr>
+        <tr>
+            <td>Temperature of Soil</td>
+            <td>
+                <strong>tsl</strong>
+            </td>
+            <td>K</td>
+            <td></td>
+            <td>stand</td>
+            <td>daily, monthly</td>
+            <td>Temperature of each soil layer. Reported as &#34;missing&#34; for grid cells occupied entirely by &#34;sea&#34;.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="species">Species</h3>
+<table id="tbl:species" class="tablenos" style="width: 50%;">
+    <caption>
+        Table 9: Specifiers for species, disturbance names and DBH classes.
+    </caption>
+    <thead>
+        <th style="width: 20%;">Specifier</th>
+        <th style="width: 80%;">Species</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>fasy</strong></td>
+            <td>Fagus sylvatica</td>
+        </tr>
+        <tr>
+            <td><strong>quro</strong></td>
+            <td>Quercus robur</td>
+        </tr>
+        <tr>
+            <td><strong>qupe</strong></td>
+            <td>Quercus petraea</td>
+        </tr>
+        <tr>
+            <td><strong>pisy</strong></td>
+            <td>Pinus sylvestris</td>
+        </tr>
+        <tr>
+            <td><strong>piab</strong></td>
+            <td>Picea abies</td>
+        </tr>
+        <tr>
+            <td><strong>pipi</strong></td>
+            <td>Pinus pinaster</td>
+        </tr>
+        <tr>
+            <td><strong>lade</strong></td>
+            <td>Larix decidua</td>
+        </tr>
+        <tr>
+            <td><strong>acpl</strong></td>
+            <td>Acer platanoides</td>
+        </tr>
+        <tr>
+            <td><strong>eugl</strong></td>
+            <td>Eucalyptus globulus</td>
+        </tr>
+        <tr>
+            <td><strong>bepe</strong></td>
+            <td>Betula pendula</td>
+        </tr>
+        <tr>
+            <td><strong>bepu</strong></td>
+            <td>Betula pubescens</td>
+        </tr>
+        <tr>
+            <td><strong>rops</strong></td>
+            <td>Robinia pseudoacacia</td>
+        </tr>
+        <tr>
+            <td><strong>frex</strong></td>
+            <td>Fraxinus excelsior</td>
+        </tr>
+        <tr>
+            <td><strong>poni</strong></td>
+            <td>Populus nigra</td>
+        </tr>
+        <tr>
+            <td><strong>soau</strong></td>
+            <td>Sorbus aucuparia</td>
+        </tr>
+        <tr>
+            <td><strong>c3gr</strong></td>
+            <td>C3 grass</td>
+        </tr>
+        <tr>
+            <td><strong>hawo</strong></td>
+            <td>hard woods</td>
+        </tr>
+        <tr>
+            <td><strong>fi</strong></td>
+            <td>fire</td>
+        </tr>
+        <tr>
+            <td><strong>wi</strong></td>
+            <td>wind</td>
+        </tr>
+        <tr>
+            <td><strong>ins</strong></td>
+            <td>Insects</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="forest-stands">Forest stands</h3>
+<table id="tbl:stand" class="tablenos">
+    <caption>
+      Table 10: Overview of the forest stands.
+    </caption>
+    <thead>
+        <th style="width: 10%;">Stand</th>
+        <th style="width: 15%;">Specifier</th>
+        <th style="width: 5%;">Country</th>
+        <th style="width: 10%;">Coordinates (Lat, Lon)</th>
+        <th style="width: 10%;">Forest type</th>
+        <th style="width: 10%;">Species</th>
+        <th style="width: 10%;">Thinning during historical time period</th>
+        <th style="width: 30%;">Comment</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Hyytiälä</td>
+            <td><strong>hyytiala</strong></td>
+            <td>FI</td>
+            <td>61.8475, 24.295</td>
+            <td>Even-aged conifer</td>
+            <td>pisy, piab</td>
+            <td>below</td>
+            <td>Note that an experimental plot of pine contains a lot of data while footprint of flux tower is larger. Please note that the deciduous admixtures only appear in the data at a later stage and hence do not need to be simulated. Only simulate pine and spruce (no hard-woods) and regenerate as pure pine stand</td>
+        </tr>
+        <tr>
+            <td>Peitz</td>
+            <td><strong>peitz</strong></td>
+            <td>DE</td>
+            <td>51.9166, 14.35</td>
+            <td>Even-aged conifer</td>
+            <td>pisy</td>
+            <td>below</td>
+            <td>Managed using a weak thinning from below.</td>
+        </tr>
+        <tr>
+            <td>Solling (beech)</td>
+            <td><strong>solling-beech</strong></td>
+            <td>DE</td>
+            <td>51.77, 9.57</td>
+            <td>Even-aged deciduous</td>
+            <td>fasy</td>
+            <td>above</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Solling (spruce)</td>
+            <td><strong>solling-spruce</strong></td>
+            <td>DE</td>
+            <td>51.77, 9.57</td>
+            <td>Even-aged conifer</td>
+            <td>piab </td>
+            <td>below</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sorø</td>
+            <td><strong>soro</strong></td>
+            <td>DK</td>
+            <td>55.485844, 11.644616</td>
+            <td>Even-aged deciduous</td>
+            <td>fasy</td>
+            <td>above</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>kroof</strong></td>
+            <td>DE</td>
+            <td>48.25, 11.4</td>
+            <td>Mixed deciduous and conifers</td>
+            <td>fasy, piab, acpl, lade, pisy, quro</td>
+            <td>below</td>
+            <td>Unmanaged/ thinning from below in past 20 years for all species.</td>
+        </tr>
+        <tr>
+            <td>Le Bray</td>
+            <td><strong>le-bray</strong></td>
+            <td>FR</td>
+            <td>44.71711, -0.7693</td>
+            <td>Even-aged conifer</td>
+            <td>pipi</td>
+            <td>below</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Collelongo</td>
+            <td><strong>collelongo</strong></td>
+            <td>IT</td>
+            <td>41.8494, 13.5881</td>
+            <td>Even-aged deciduous</td>
+            <td>fasy</td>
+            <td>above</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Biely Kríž</td>
+            <td><strong>bily-kriz</strong></td>
+            <td>CZ</td>
+            <td>49.3, 18.32</td>
+            <td>Even-aged conifer</td>
+            <td>piab</td>
+            <td>below</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="repoting-model-results">Repoting model results</h2>
+<h3 id="general-notes">General Notes</h3>
+<p>It is important that you comply precisely with the formatting specified below, in order to facilitate the analysis of your simulation results in the ISIMIP framework. Incorrect formatting can
+seriously delay the analysis. The ISIMIP Team will be glad to assist with the preparation of these files if necessary.</p>
+<p>For questions or clarifications, please contact info@isimip.org or the data manager directly (buechner@pik‐potsdam.de) before submitting files.</p>
+<h3 id="format-for-gridded-data">Format for gridded data</h3>
+<p>Gridded data should be returned in NetCDF4 format with a compression level of at least 5. It is important that you comply precisely with the formatting specified below, in order to facilitate the analysis of your simulation results in the ISIMIP framework. Incorrect formatting can seriously delay the analysis or lead to errors. For questions or clarifications, please contact the ISIMIP coordination team. Further information and instructions follow in this section and at the ISIMIP website (<a href="https://www.isimip.org/protocol/preparing-simulation-files/">https://www.isimip.org/protocol/preparing-simulation-files/</a>).</p>
+<p>Global data are to be submitted for the ranges <strong>-89.75</strong> to <strong>89.75</strong> degrees latitude, and <strong>-179.75</strong> to <strong>179.75</strong> degrees longitude, i.e. 360 rows and 720 columns, or 259200 grid cells total. Please report the output data row-wise starting at 89.75 and -179.75, and ending at -89.75 and 179.75. The standard horizontal resolution is 0.5x0.5 degrees, corresponding to the resolution of the climate input data; with reporting intervals of 0.5 degrees_east for longitude, and of -0.5 degrees_north for latitude. Submitting data at lower resolution than 0.5x0.5 degrees is only encouraged in exceptional cases; in those cases, the above numbers will change accordingly (e.g., a 1x1 degree grid would have 180 rows, from 89.5 to -89.5 degrees latitude).</p>
+<p>Antarctica and Greenland do not have to be simulated. If you are limited by data (e.g. soil data) you can also reduce the latitude range of your simulations, however, the minimal latitude range to be simulated is -60 to + 67 degrees. Important: When reporting results the whole grid as specified above should be reported – pixels you did not simulate should be filled with the missing value marker (<code>1.e+20f</code>).</p>
+<p>Regional model teams should interpolate their output data to the same, common 0.5x0.5 degree grid as described above, and submit in the same NetCDF file format. Each file should cover the entire globe (even though the filename should contain the name of the region), with any grid cells outside the simulated region to be filled with missing values (1.e+20f). This will not lead to significantly larger files as long as NetCDF compression is used. Exception: Single (one-point) timeseries do not have to be embedded into the 0.5x0.5 degree grid, but should be reported as NetCDF4 files with the coordinates of the point included in the header information (e.g., <code>lon : 172.84 degrees_east</code>; <code>lat : 47.08 degrees_north</code>).</p>
+<p>Note that submitting results in this format is important to facilitate comparison among different models and between global and regional scale. The ISIMIP coordination team will be glad to assist with the preparation of these files if necessary. In addition to the global file, regional model teams may submit a second file containing the output data in their default format. This may be e.g. on a finer resolution than 0.5°, on a non-regular grid, etc.</p>
+<h3 id="format-for-non-gridded-data">Format for non-gridded data</h3>
+<p>Data that is not defined on a grid, such as point-based data (e.g. for particular gauges or data for world regions), should nonetheless be reported in NetCDF format (e.g. as a separate file for each gauge or region), each file containing a single time series. The ISIMIP coordination team will assist with the preparation of these files where necessary. It is important that all ISIMIP results exist in NetCDF format, in order to be compatible with the structure and functionalities of the ESGF repository.</p>
+<h3 id="variables-with-layers">Variables with layers</h3>
+<p>For variables that can be simulated on multiple fixed layers (e.g. variables with DBH classes in Forest Models, or with fixed depth layers in the Lakes sector), we require the following:</p>
+<ul>
+<li>The level dimension has a specific name per sector; i.e. <code>levlak</code> for the lakes sector, <code>lev</code> for the water sector, <code>dbh_class</code> for forest models, or <code>growing_season</code> for agriculture</li>
+<li>For variables where a level cover a range, like soil depth or dbh class, specify the lower and upper boundaries of every layer, with data corresponding to the midpoint of each layer (e.g. dbh class or depth layer)</li>
+<li>The boundaries of the top/bottom layers will end up in a variable called <code>depth_bnds</code>, and the midpoint will be in <code>depth</code></li>
+<li><code>depth</code> and <code>depth_bnds</code> are double</li>
+<li>For variables where a level has the function of an index, like growing season, it is not necessary to indicate boundaries</li>
+<li>For variables where it is possible to have layers or not (e.g. variable <code>harv</code> in Forest Models), add global attribute <code>dbhclass_profile</code> and use label <code>true</code> if the file contains layers (e.g. multiple dbh classes) or <code>false</code> depending on the case</li>
+</ul>
+<p>For variables simulated on depth layers varying over time and/or over space (e.g. soil moisture on layers that can get deeper or shallower over time, or have different depths at different locations), we distinguish between variables where the levels vary per grid cell, and variables where the levels vary over time. For such variables, we additionally require the following:</p>
+<ul>
+<li>For variables where depth of layers varies over time, add global attribute <code>time_varying_soil_layer_depth</code> and use label <code>true</code> or <code>false</code> depending on the case</li>
+<li>For variables where depth of layers varies per grid cell, add global attribute <code>location_varying_soil_layer_depth</code> and use label <code>true</code> or <code>false</code> depending on the case</li>
+</ul>
+<p>More information and example outputs are available on the ISIMIP website, <a href="https://www.isimip.org">https://www.isimip.org</a> (Protocol -&gt; Important information about preparing your simulation files).</p>
+<h3 id="time-intervals">Time intervals</h3>
+<p>Please submit your output data in chunks according to the Table ?? depending on the time step of the output variable you are reporting (the requested time step for each variable is listed in the sector-specific tables).</p>
+<h3 id="submission-of-simulations">Submission of simulations</h3>
+<p>Data should be submitted to a dedicated file system on a central server located at DKRZ Hamburg. More information on how to access this server and on formatting of your files is available on the ISIMIP website at https://www.isimip.org/protocol/preparing-simulation-files/. The ISIMIP coordination team will gladly provide assistance upon request.</p>
+<h3 id="documentation-of-models-and-experiments">Documentation of models and experiments</h3>
+<p>In addition to adhering to the common settings described in this protocol, it is essential to keep track of further details regarding the configuration of each individual model. This ensures that the simulation results can appropriately be interpreted by authors of multi-model studies, and that these can remain transparent and usable for a long time into the future. For this purpose, the ISIMIP coordination team provides a questionnaire that all modelling teams are asked to answer. The questionnaire is accessible online through the ISIMIP website; for assistance please write to info@isimip.org.</p>
+<h3 id="time-slices-for-individual-files">Time slices for individual files</h3>
+<p>For time slices holding global daily data, files should cover 10 years starting in the second year of a decade and end in the first year of the next decade (e.g. 1991-2000). If the time period starts after the second year of the decade, or ends before the first year of the new decade, the start or end year of the time period should be used as the start or end year of the file respectively. Data on a lower than daily temporal resolution or non-global data should be submitted for the entire simulation period in single files per variable.</p>
+<p><em>Examples of time slices for individual files with global daily data:</em></p>
+<ul>
+<li>Pre-industrial: <code>1661_1670</code>, <code>1671_1680</code>, ..., <code>1851_1860</code></li>
+<li>Historical: <code>1861_1870</code>, <code>1871_1880</code>, ..., <code>2001_2005</code></li>
+<li>Future: <code>2006_2010</code>, <code>2011_2020</code>, ..., <code>2081_2090</code>, <code>2091_2099</code></li>
+</ul>
+<p><em>Time slices for individual files with non-global or non-daily data:</em></p>
+<ul>
+<li>Pre-industrial: <code>1661_1860</code></li>
+<li>Historical: <code>1861_2005</code></li>
+<li>Future: <code>2006_2099</code></li>
+</ul>
+<h3 id="file-names">File names</h3>
+<p>File names consist of a series of identifiers, separated by underscores; see examples below. Things to note:</p>
+<ul>
+<li>Report one variable per file</li>
+<li>In filenames, use lowercase letters only</li>
+<li>Use underscore (<code>_</code>) to separate identifiers</li>
+<li>Variable names consist of a single word without hyphens or underscores</li>
+<li>Use hyphens (<code>-</code>) to separate strings within an identifier, e.g. in a model name</li>
+<li>NetCDF file extension is <code>.nc</code></li>
+<li>Region, basin or site names: Where simulations are provided for a single station within a river basin, the tag should have the format <code>&lt;basin&gt;-&lt;station&gt;</code>.</li>
+<li>Possible timestep values for the regional forests sector are: 3hr,
+daily,
+monthly,
+annual</li>
+</ul>
+<p>The file name format is:</p>
+<pre><code>&lt;modelname&gt;_&lt;climate-forcing&gt;_&lt;bias-correction&gt;_&lt;climate-scenario&gt;_&lt;soc‐scenario&gt;_&lt;variable&gt;_&lt;region&gt;_&lt;timestep&gt;_&lt;start‐year&gt;_&lt;end‐year&gt;.nc
+</code></pre>
+
+<p>The following regular expression can be used to validate and parse the file name for the regional forests sector:</p>
+<pre><code>(?P&lt;modelname&gt;[a-z0-9-+.]+)_(?P&lt;climate_forcing&gt;[a-z0-9-]+)_(?P&lt;bias_adjustment&gt;[a-z0-9-]+)_(?P&lt;climate_scenario&gt;[a-z0-9-]+)_(?P&lt;soc_scenario&gt;[a-z0-9-]+)_(?P&lt;sens_scenario&gt;[a-z0-9-]+)_(?P&lt;variable&gt;[a-z0-9]+)(-(?P&lt;species&gt;[a-z0-9]+))?_(?P&lt;forest_stand&gt;[a-z0-9-]+)_(?P&lt;timestep&gt;[a-z0-9-]+)_(?P&lt;start_year&gt;\d{4})_(?P&lt;end_year&gt;\d{4}).nc
+</code></pre>
+
+<p>Files should be uploaded in 10-year pieces. For the transition from the historical to the future
+period (2005-2006), files should be separated, i.e. the identifiers would be 2001_2005 and
+2006_2010.</p>
+<p>For the forest simulations, no time slices are needed and the full simulation period can be
+covered in one file.</p>
+<p>For further instructions on file naming and formatting, please also refer to our <a href="https://www.isimip.org/protocol/isimip2b-files/#file-formats-and-meta-data">website</a>.</p>
+        </main>
+
+        <footer>
+            For questions or clarifications, please contact <a href="mailto:info@isimip.org">info@isimip.org</a>.
+        </footer>
+    </body>
+</html>

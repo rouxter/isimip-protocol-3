@@ -1,0 +1,832 @@
+<html>
+    <head>
+        
+<title>ISIMIP3 simulation protocol</title>
+
+
+        <style>
+            @media screen {
+                html {
+                    background-color: silver;
+                }
+                body {
+                    background-color: white;
+                    box-shadow: 0 0 10px #666;
+                    width: 60rem;
+                    margin: 0 auto;
+                    padding: 2rem;
+                }
+            }
+            @media print {
+                body {
+                    zoom: 80%;
+                    margin: 20mm;
+
+                    /* fixex colors in printing */
+                    -webkit-print-color-adjust: exact;
+                }
+                h2 {
+                    break-before: always;
+                }
+            }
+            body {
+                font-family: Helvetica, Arial, sans;
+                font-size: 12pt;
+                line-height: 1.25rem;
+            }
+            h1 {
+                font-size: 2rem;
+                line-height: 2rem;
+                margin: 2rem 0;
+            }
+            h2 {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            h3 {
+                margin: 1rem 0;
+            }
+            h5 {
+                margin: 0;
+                font-size: 1rem;
+            }
+            a, a:hover, a:visited, a:focus {
+                color: #0681be;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+            table, th, td {
+                border: 1px solid #4A4A4A;
+            }
+            th, td {
+                padding: 0.8rem;
+                font-size: 0.7em;
+            }
+            caption {
+                text-align: left;
+                margin-bottom: 0.5em;
+                font-size: small;
+            }
+            thead {
+                background-color: #4A4A4A;
+                color: white;
+            }
+            table .red {
+                background-color: #E5B8B7;
+            }
+            table .gray {
+                background-color: #e5e5e5;
+            }
+            table .green {
+                background-color: #D9EAD3;
+            }
+            code {
+                font-size: 0.8rem;
+                color: #333;
+                background-color: #e5e5e5;
+                border-radius: 3px;
+                padding: 0 3px;
+            }
+            header {
+                font-size: small;
+                height: 4rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid silver;
+            }
+            header img.logo {
+                display: block;
+                height: 4rem;
+            }
+            header, header a, header a:hover, header a:visited, header a:focus {
+                color: silver;
+            }
+            header .right {
+                float: right;
+                text-align: right;
+            }
+            footer {
+                text-align: center;
+                margin-top: 2rem;
+                padding-top: 1rem;
+                border-top: 1px solid silver;
+            }
+            pre {
+                background-color: #e5e5e5;
+                padding: 1rem;
+                white-space: pre-wrap;
+                font-size: 0.8rem;
+            }
+            pre code {
+                font-size: smaller;
+                background-color: transparent;
+                padding: 0;
+            }
+            .toc {
+                width: 50%;
+                border: 1px solid silver;
+            }
+            .toc ul {
+                margin-top: 0.25rem;
+                padding-left: 2rem;
+            }
+            .toc > ul {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+            }
+            .toc li {
+                margin-bottom: 0.25rem;
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="right">
+                <p>
+                    Last updated: 14 February 2020
+                </p>
+                <p>
+                    Commit hash: <a href="https://github.com/ISI-MIP/isimip-protocol-3/commit/5c7b644a2158d7ad6602e7f061d870f5b3cf7e0c">5c7b644a2158d7ad6602e7f061d870f5b3cf7e0c</a>
+                </p>
+            </div>
+            <div>
+                <a href="https://www.isimip.org">
+                    <img class="logo" src="https://www.isimip.org/static/images/logo-white.png" alt="ISIMIP logo">
+                </a>
+            </div>
+        </header>
+
+        <main>
+            
+    <h1>
+        ISIMIP3 simulation protocol
+    </h1>
+
+    <h2>Protocol</h2>
+
+    
+    <h3>ISIMIP3a</h3>
+
+    <ul>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/agriculture.html">
+            Agriculture sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/biodiversity.html">
+            Terrestrial biodiversity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/biomes.html">
+            Biomes sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/coastal.html">
+            Coastal infrastructure sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/energy.html">
+            Energy sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/forestry.html">
+            Regional forests sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/health.html">
+            Temperature-related mortality sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/lakes_global.html">
+            Lakes (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/lakes_local.html">
+            Lakes (local) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/marine-fishery_global.html">
+            Fisheries and Marine Ecosystems (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/marine-fishery_regional.html">
+            Fisheries and Marine Ecosystems (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/permafrost.html">
+            Permafrost sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/water_global.html">
+            Water (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/water_regional.html">
+            Water (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/labour.html">
+            Labour productivity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3a/diarrhea.html">
+            Diarrhoeal diseases sector
+        </a>
+    </li>
+    
+    </ul>
+    
+    <h3>ISIMIP3b</h3>
+
+    <ul>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/agriculture.html">
+            Agriculture sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/biodiversity.html">
+            Terrestrial biodiversity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/biomes.html">
+            Biomes sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/coastal.html">
+            Coastal infrastructure sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/energy.html">
+            Energy sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/forestry.html">
+            Regional forests sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/health.html">
+            Temperature-related mortality sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/lakes_global.html">
+            Lakes (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/lakes_local.html">
+            Lakes (local) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/marine-fishery_global.html">
+            Fisheries and Marine Ecosystems (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/marine-fishery_regional.html">
+            Fisheries and Marine Ecosystems (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/permafrost.html">
+            Permafrost sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/water_global.html">
+            Water (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/water_regional.html">
+            Water (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/labour.html">
+            Labour productivity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="protocol/ISIMIP3b/diarrhea.html">
+            Diarrhoeal diseases sector
+        </a>
+    </li>
+    
+    </ul>
+    
+
+    <h2>JSON schema</h2>
+
+    
+    <h3>ISIMIP3a</h3>
+
+    
+    <h4>OutputData</h4>
+
+    <ul>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/agriculture.json">
+            Agriculture sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/biodiversity.json">
+            Terrestrial biodiversity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/biomes.json">
+            Biomes sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/coastal.json">
+            Coastal infrastructure sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/energy.json">
+            Energy sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/forestry.json">
+            Regional forests sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/health.json">
+            Temperature-related mortality sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/lakes_global.json">
+            Lakes (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/lakes_local.json">
+            Lakes (local) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/marine-fishery_global.json">
+            Fisheries and Marine Ecosystems (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/marine-fishery_regional.json">
+            Fisheries and Marine Ecosystems (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/permafrost.json">
+            Permafrost sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/water_global.json">
+            Water (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/water_regional.json">
+            Water (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/labour.json">
+            Labour productivity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3a/OutputData/diarrhea.json">
+            Diarrhoeal diseases sector
+        </a>
+    </li>
+    
+    </ul>
+    
+    
+    <h3>ISIMIP3b</h3>
+
+    
+    <h4>OutputData</h4>
+
+    <ul>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/agriculture.json">
+            Agriculture sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/biodiversity.json">
+            Terrestrial biodiversity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/biomes.json">
+            Biomes sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/coastal.json">
+            Coastal infrastructure sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/energy.json">
+            Energy sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/forestry.json">
+            Regional forests sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/health.json">
+            Temperature-related mortality sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/lakes_global.json">
+            Lakes (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/lakes_local.json">
+            Lakes (local) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/marine-fishery_global.json">
+            Fisheries and Marine Ecosystems (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/marine-fishery_regional.json">
+            Fisheries and Marine Ecosystems (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/permafrost.json">
+            Permafrost sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/water_global.json">
+            Water (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/water_regional.json">
+            Water (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/labour.json">
+            Labour productivity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="schema/ISIMIP3b/OutputData/diarrhea.json">
+            Diarrhoeal diseases sector
+        </a>
+    </li>
+    
+    </ul>
+    
+    
+
+    <h2>File system patterns</h2>
+
+    
+    <h3>ISIMIP3a</h3>
+
+    
+    <h4>OutputData</h4>
+
+    <ul>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/agriculture.json">
+            Agriculture sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/biodiversity.json">
+            Terrestrial biodiversity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/biomes.json">
+            Biomes sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/coastal.json">
+            Coastal infrastructure sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/energy.json">
+            Energy sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/forestry.json">
+            Regional forests sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/health.json">
+            Temperature-related mortality sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/lakes_global.json">
+            Lakes (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/lakes_local.json">
+            Lakes (local) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/marine-fishery_global.json">
+            Fisheries and Marine Ecosystems (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/marine-fishery_regional.json">
+            Fisheries and Marine Ecosystems (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/permafrost.json">
+            Permafrost sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/water_global.json">
+            Water (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/water_regional.json">
+            Water (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/labour.json">
+            Labour productivity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3a/OutputData/diarrhea.json">
+            Diarrhoeal diseases sector
+        </a>
+    </li>
+    
+    </ul>
+    
+    
+    <h3>ISIMIP3b</h3>
+
+    
+    <h4>OutputData</h4>
+
+    <ul>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/agriculture.json">
+            Agriculture sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/biodiversity.json">
+            Terrestrial biodiversity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/biomes.json">
+            Biomes sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/coastal.json">
+            Coastal infrastructure sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/energy.json">
+            Energy sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/forestry.json">
+            Regional forests sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/health.json">
+            Temperature-related mortality sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/lakes_global.json">
+            Lakes (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/lakes_local.json">
+            Lakes (local) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/marine-fishery_global.json">
+            Fisheries and Marine Ecosystems (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/marine-fishery_regional.json">
+            Fisheries and Marine Ecosystems (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/permafrost.json">
+            Permafrost sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/water_global.json">
+            Water (global) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/water_regional.json">
+            Water (regional) sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/labour.json">
+            Labour productivity sector
+        </a>
+    </li>
+    
+    <li>
+        <a href="pattern/ISIMIP3b/OutputData/diarrhea.json">
+            Diarrhoeal diseases sector
+        </a>
+    </li>
+    
+    </ul>
+    
+    
+
+    <h2>Glossary</h2>
+
+    <ul>
+        <li>
+            <a href="glossary.json">
+                Glossary
+            </a>
+        </li>
+    </ul>
+
+
+        </main>
+
+        <footer>
+            For questions or clarifications, please contact <a href="mailto:info@isimip.org">info@isimip.org</a>.
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,4975 @@
+{
+  "commit": "5c7b644a2158d7ad6602e7f061d870f5b3cf7e0c",
+  "terms": {
+    "bias_adjustment": {
+      "nobasd": {
+        "description": "Indicates that no bias correction was performed on the climate data (e.g. ocean data)."
+      },
+      "localbc": {
+        "description": "Refers to local data from weather stations used for the bias-correction in e.g. the forest sector.",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "w5e5": {
+        "description": "Refers to W5E5 data used for the bias-correction globally on a 0.5\u00b0 grid."
+      }
+    },
+    "sens_scenario": {
+      "co2": {
+        "description": "For all experiments other than the sensitivity experiments for which 2005co2 is explicitly written."
+      },
+      "2005co2": {
+        "description": ""
+      }
+    },
+    "acidification_type": {
+      "oa": {
+        "title": "",
+        "description": ""
+      },
+      "no-oa": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "river_basin": {
+      "sao-paulo-de-olivenca": {
+        "title": "S\u00e3o Paulo de Olivenca",
+        "river": "Amazon",
+        "river_specifier": "amazon",
+        "lat": -3.45,
+        "lon": -68.75,
+        "grdc": 3623100,
+        "availability_monthly": "1979-1993",
+        "availability_daily": "1973-2010",
+        "area_upstream": 990781
+      },
+      "el-diem": {
+        "title": "El-Deim, Sudan Border",
+        "river": "Blue Nile",
+        "river_specifier": "blue-nile",
+        "lat": 11,
+        "lon": 35,
+        "grdc": "",
+        "availability_monthly": "1961-2002",
+        "availability_daily": "1900-1982",
+        "area_upstream": 160000
+      },
+      "khartoum": {
+        "title": "Khartoum",
+        "river": "Blue Nile",
+        "river_specifier": "blue-nile",
+        "lat": 15.62,
+        "lon": 32.55,
+        "grdc": 1663100,
+        "availability_monthly": "",
+        "availability_daily": "1900-1982",
+        "area_upstream": 325000
+      },
+      "wien-nussdorf": {
+        "title": "Wien-Nu\u00dfdorf",
+        "river": "Danube",
+        "river_specifier": "danube",
+        "lat": 48.25,
+        "lon": 16.3,
+        "grdc": 6242500,
+        "availability_monthly": "1828-1899",
+        "availability_daily": "1900-to date",
+        "area_upstream": 101700
+      },
+      "farakka": {
+        "title": "Farakka",
+        "river": "Ganges",
+        "river_specifier": "ganges",
+        "lat": 25,
+        "lon": 87.92,
+        "grdc": 2846800,
+        "availability_monthly": "1949-1973",
+        "availability_daily": "",
+        "area_upstream": 835000
+      },
+      "tekra": {
+        "title": "Tekra",
+        "river": "Godavari",
+        "river_specifier": "godavari",
+        "lat": 19,
+        "lon": 80,
+        "grdc": "",
+        "availability_monthly": "1964-2017",
+        "availability_daily": "1964-2017",
+        "area_upstream": 119781
+      },
+      "tarbela": {
+        "title": "Tarbela Reservoir",
+        "river": "Indus",
+        "river_specifier": "indus",
+        "lat": 72.86,
+        "lon": 34.33,
+        "grdc": "",
+        "availability_monthly": "2000-2016",
+        "availability_daily": "2000-2016",
+        "area_upstream": 173345
+      },
+      "krestovski": {
+        "title": "Krestovski",
+        "river": "Lena",
+        "river_specifier": "lena",
+        "lat": 59.73,
+        "lon": 113.17,
+        "grdc": 2903427,
+        "availability_monthly": "1936-2002",
+        "availability_daily": "1936-1999",
+        "area_upstream": 440000
+      },
+      "stolb": {
+        "title": "Stolb",
+        "river": "Lena",
+        "river_specifier": "lena",
+        "lat": 72.37,
+        "lon": 126.8,
+        "grdc": 2903430,
+        "availability_monthly": "1978-1994",
+        "availability_daily": "1951-2002",
+        "area_upstream": 2460000
+      },
+      "arctic-red-river": {
+        "title": "Arctic Red River",
+        "river": "Mackenzie",
+        "river_specifier": "mackenzie",
+        "lat": 67.4583,
+        "lon": -133.745,
+        "grdc": 4208025,
+        "availability_monthly": "1972-1996",
+        "availability_daily": "1972-2015",
+        "area_upstream": 1660000
+      },
+      "alton": {
+        "title": "Alton",
+        "river": "Mississippi",
+        "river_specifier": "mississippi",
+        "lat": 38.885,
+        "lon": -90.1809,
+        "grdc": 4119800,
+        "availability_monthly": "1928-1984",
+        "availability_daily": "1933-1987",
+        "area_upstream": 444185
+      },
+      "louth": {
+        "title": "Louth",
+        "river": "Darling",
+        "river_specifier": "darling",
+        "lat": -30.5318,
+        "lon": 145.1144,
+        "grdc": 5204250,
+        "availability_monthly": "1954-2000",
+        "availability_daily": "1954-2008",
+        "area_upstream": 489300
+      },
+      "dire": {
+        "title": "Dire",
+        "river": "Niger",
+        "river_specifier": "niger",
+        "lat": 16.2667,
+        "lon": -3.3833,
+        "grdc": 1134700,
+        "availability_monthly": "1924-2012",
+        "availability_daily": "1924-2003",
+        "area_upstream": 340000
+      },
+      "koulikoro": {
+        "title": "Koulikoro",
+        "river": "Niger",
+        "river_specifier": "niger",
+        "lat": -30.5318,
+        "lon": -7.55,
+        "grdc": 1134100,
+        "availability_monthly": "1907-2012",
+        "availability_daily": "1907-2006",
+        "area_upstream": 120000
+      },
+      "lokoja": {
+        "title": "Lokoja",
+        "river": "Niger",
+        "river_specifier": "niger",
+        "lat": 7.8,
+        "lon": 6.7667,
+        "grdc": 1834101,
+        "availability_monthly": "2007-2012",
+        "availability_daily": "1970-2006",
+        "area_upstream": 2074171
+      },
+      "tossaye": {
+        "title": "Tossaye",
+        "river": "Niger",
+        "river_specifier": "niger",
+        "lat": 16.9416,
+        "lon": -0.579166,
+        "grdc": 1134850,
+        "availability_monthly": "1954-1992",
+        "availability_daily": "1954-1992",
+        "area_upstream": 348000
+      },
+      "floresta": {
+        "title": "Floresta",
+        "river": "Pajeu",
+        "river_specifier": "pajeu",
+        "lat": -8.6089,
+        "lon": -38.5767,
+        "grdc": "",
+        "availability_monthly": "",
+        "availability_daily": "",
+        "area_upstream": 12266
+      },
+      "lobith": {
+        "title": "Lobith",
+        "river": "Rhine",
+        "river_specifier": "rhine",
+        "lat": 51.84,
+        "lon": 6.11,
+        "grdc": 6435060,
+        "availability_monthly": "1901-1996",
+        "availability_daily": "1901-2010",
+        "area_upstream": 160800
+      },
+      "almourol": {
+        "title": "Almourol",
+        "river": "Tagus",
+        "river_specifier": "tagus",
+        "lat": 39.47,
+        "lon": -8.37,
+        "grdc": 6113050,
+        "availability_monthly": "1973-1990",
+        "availability_daily": "1982-1990",
+        "area_upstream": 61490
+      },
+      "trillo": {
+        "title": "Trillo",
+        "river": "Tagus",
+        "river_specifier": "tagus",
+        "lat": 40.7,
+        "lon": -2.58,
+        "grdc": 6213800,
+        "availability_monthly": "1977-1984",
+        "availability_daily": "1977-1984",
+        "area_upstream": 3253
+      },
+      "cuntan": {
+        "title": "Cuntan",
+        "river": "Yangtze",
+        "river_specifier": "yangtze",
+        "lat": 29.616667,
+        "lon": 106.6,
+        "grdc": "",
+        "availability_monthly": "1987-2006",
+        "availability_daily": "1987-2006",
+        "area_upstream": 804859
+      },
+      "tangnaihai": {
+        "title": "Tangnaihai",
+        "river": "Yellow, Huang He",
+        "river_specifier": "yellow",
+        "lat": 35.5,
+        "lon": 100.15,
+        "grdc": "",
+        "availability_monthly": "1971-2002",
+        "availability_daily": "1971-2002",
+        "area_upstream": 121000
+      }
+    },
+    "species": {
+      "fasy": {
+        "title": "Fagus sylvatica"
+      },
+      "quro": {
+        "title": "Quercus robur"
+      },
+      "qupe": {
+        "title": "Quercus petraea"
+      },
+      "pisy": {
+        "title": "Pinus sylvestris"
+      },
+      "piab": {
+        "title": "Picea abies"
+      },
+      "pipi": {
+        "title": "Pinus pinaster"
+      },
+      "lade": {
+        "title": "Larix decidua"
+      },
+      "acpl": {
+        "title": "Acer platanoides"
+      },
+      "eugl": {
+        "title": "Eucalyptus globulus"
+      },
+      "bepe": {
+        "title": "Betula pendula"
+      },
+      "bepu": {
+        "title": "Betula pubescens"
+      },
+      "rops": {
+        "title": "Robinia pseudoacacia"
+      },
+      "frex": {
+        "title": "Fraxinus excelsior"
+      },
+      "poni": {
+        "title": "Populus nigra"
+      },
+      "soau": {
+        "title": "Sorbus aucuparia"
+      },
+      "c3gr": {
+        "title": "C3 grass"
+      },
+      "hawo": {
+        "title": "hard woods"
+      },
+      "fi": {
+        "title": "fire"
+      },
+      "wi": {
+        "title": "wind"
+      },
+      "ins": {
+        "title": "Insects"
+      }
+    },
+    "soc_variable": {
+      "test": {
+        "title": "A test variable",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      }
+    },
+    "product": {
+      "OutputData": {
+        "title": "OutputData"
+      }
+    },
+    "lake_site": {
+      "alqueva": {
+        "title": "Alqueva Reservoir",
+        "country": "Portugal",
+        "lon": -7.49,
+        "lat": 38.2,
+        "type": "reservoir"
+      },
+      "annecy": {
+        "title": "Lake Annecy",
+        "country": "France",
+        "lon": 6.17,
+        "lat": 45.87,
+        "type": "lake"
+      },
+      "annie": {
+        "title": "Lake Annie",
+        "country": "USA",
+        "lon": -81.35,
+        "lat": 27.21,
+        "type": "lake"
+      },
+      "argyle": {
+        "title": "Lake Argyle",
+        "country": "Australia",
+        "lon": 128.68,
+        "lat": -16.31,
+        "type": "reservoir"
+      },
+      "biel": {
+        "title": "Lake Biel",
+        "country": "Switzerland",
+        "lon": 7.16,
+        "lat": 47.08,
+        "type": "lake"
+      },
+      "big-muskellunge": {
+        "title": "Big Muskellunge Lake",
+        "country": "USA",
+        "lon": -89.61,
+        "lat": 46.02,
+        "type": "lake"
+      },
+      "black-oak": {
+        "title": "Black Oak Lake",
+        "country": "USA",
+        "lon": -89.32,
+        "lat": 46.16,
+        "type": "lake"
+      },
+      "bourget": {
+        "title": "Lake Bourget",
+        "country": "France",
+        "lon": 5.86,
+        "lat": 45.76,
+        "type": "lake"
+      },
+      "burley-griffin": {
+        "title": "Lake Burley Griffin",
+        "country": "Australia",
+        "lon": 149.07,
+        "lat": -35.3,
+        "type": "reservoir"
+      },
+      "crystal-lake": {
+        "title": "Crystal Lake",
+        "country": "USA",
+        "lon": -89.61,
+        "lat": 46.0,
+        "type": "lake"
+      },
+      "crystal-bog": {
+        "title": "Crystal Bog",
+        "country": "USA",
+        "lon": -89.61,
+        "lat": 46.01,
+        "type": "lake"
+      },
+      "delavan": {
+        "title": "Delavan Lake",
+        "country": "USA",
+        "lon": -88.6,
+        "lat": 42.61,
+        "type": "lake"
+      },
+      "dickie": {
+        "title": "Dickie Lake",
+        "country": "Canada",
+        "lon": -79.09,
+        "lat": 45.15,
+        "type": "lake"
+      },
+      "eagle ": {
+        "title": "Eagle Lake",
+        "country": "Canada",
+        "lon": -76.7,
+        "lat": 44.68,
+        "type": "lake"
+      },
+      "ekoln ": {
+        "title": "Ekoln basin of M\u00e4laren",
+        "country": "Sweden",
+        "lon": 17.62,
+        "lat": 59.75,
+        "type": "lake"
+      },
+      "erken": {
+        "title": "Lake Erken",
+        "country": "Sweden",
+        "lon": 18.63,
+        "lat": 59.84,
+        "type": "lake"
+      },
+      "esthwaite-water": {
+        "title": "Esthwaite Water",
+        "country": "United Kingdom",
+        "lon": -2.99,
+        "lat": 54.37,
+        "type": "lake"
+      },
+      "falling-creek": {
+        "title": "Falling Creek Reservoir",
+        "country": "USA",
+        "lon": -79.84,
+        "lat": 37.31,
+        "type": "reservoir"
+      },
+      "feeagh": {
+        "title": "Lake Feeagh",
+        "country": "Ireland",
+        "lon": -9.5,
+        "lat": 53.9,
+        "type": "lake"
+      },
+      "fish": {
+        "title": "Fish Lake",
+        "country": "USA",
+        "lon": -89.65,
+        "lat": 43.29,
+        "type": "lake"
+      },
+      "geneva": {
+        "title": "Lake Geneva",
+        "country": "France/Switzerland",
+        "lon": 6.59,
+        "lat": 46.45,
+        "type": "lake"
+      },
+      "great": {
+        "title": "Great Pond",
+        "country": "USA",
+        "lon": -69.89,
+        "lat": 44.53,
+        "type": "lake"
+      },
+      "green": {
+        "title": "Green Lake",
+        "country": "USA",
+        "lon": -89.0,
+        "lat": 43.81,
+        "type": "lake"
+      },
+      "harp": {
+        "title": "Harp Lake",
+        "country": "Canada",
+        "lon": -79.13,
+        "lat": 45.38,
+        "type": "lake"
+      },
+      "kilpisjarvi": {
+        "title": "Kilpisj\u00e4rvi",
+        "country": "Finland",
+        "lon": 20.77,
+        "lat": 69.03,
+        "type": "lake"
+      },
+      "kinneret": {
+        "title": "Lake Kinneret",
+        "country": "Israel",
+        "lon": 35.35,
+        "lat": 32.49,
+        "type": "lake"
+      },
+      "kivu": {
+        "title": "Lake Kivu",
+        "country": "Rwanda/DR Congo",
+        "lon": 29.24,
+        "lat": -1.73,
+        "type": "lake"
+      },
+      "klicava": {
+        "title": "Klicava Reservoir",
+        "country": "Czechia",
+        "lon": 13.93,
+        "lat": 50.07,
+        "type": "reservoir"
+      },
+      "kuivajarvi": {
+        "title": "Lake Kuivajarvi",
+        "country": "Finland",
+        "lon": 23.51,
+        "lat": 60.47,
+        "type": "lake"
+      },
+      "langtjern": {
+        "title": "Lake Langtjern",
+        "country": "Norway",
+        "lon": 9.73,
+        "lat": 60.37,
+        "type": "lake"
+      },
+      "laramie": {
+        "title": "Laramie Lake",
+        "country": "USA",
+        "lon": -105.84,
+        "lat": 40.62,
+        "type": "lake"
+      },
+      "lower-zurich": {
+        "title": "Lower Lake Zurich",
+        "country": "Switzerland",
+        "lon": 8.58,
+        "lat": 47.28,
+        "type": "lake"
+      },
+      "mendota": {
+        "title": "Lake Mendota",
+        "country": "USA",
+        "lon": -89.41,
+        "lat": 43.1,
+        "type": "lake"
+      },
+      "monona": {
+        "title": "Lake Monona",
+        "country": "USA",
+        "lon": -89.36,
+        "lat": 43.06,
+        "type": "lake"
+      },
+      "mozhaysk": {
+        "title": "Mozhaysk reservoir",
+        "country": "Russia",
+        "lon": 35.82,
+        "lat": 55.59,
+        "type": "reservoir"
+      },
+      "mt-bold": {
+        "title": "Mt Bold",
+        "country": "Australia",
+        "lon": 138.71,
+        "lat": -35.12,
+        "type": "reservoir"
+      },
+      "mueggelsee": {
+        "title": "Lake M\u00fcggelsee",
+        "country": "Germany",
+        "lon": 13.65,
+        "lat": 52.43,
+        "type": "lake"
+      },
+      "neuchatel": {
+        "title": "Lake Neuch\u00e2tel",
+        "country": "Switzerland",
+        "lon": 6.52,
+        "lat": 46.54,
+        "type": "lake"
+      },
+      "ngoring ": {
+        "title": "Ngoring ",
+        "country": "China",
+        "lon": 97.7,
+        "lat": 34.9,
+        "type": "lake"
+      },
+      "nohipalo-mustjaerv": {
+        "title": "Lake Nohipalo Mustj\u00e4rv",
+        "country": "Estonia",
+        "lon": 27.34,
+        "lat": 57.93,
+        "type": "lake"
+      },
+      "nohipalo-valgejaerv": {
+        "title": "Lake Nohipalo Valgej\u00e4rv",
+        "country": "Estonia",
+        "lon": 27.35,
+        "lat": 57.94,
+        "type": "lake"
+      },
+      "okauchee": {
+        "title": "Okauchee Lake",
+        "country": "USA",
+        "lon": -88.43,
+        "lat": 43.13,
+        "type": "lake"
+      },
+      "paajarvi": {
+        "title": "Lake P\u00e4\u00e4j\u00e4rvi",
+        "country": "Finland",
+        "lon": 25.13,
+        "lat": 61.07,
+        "type": "lake"
+      },
+      "rappbode": {
+        "title": "Rappbode Reservoir",
+        "country": "Germany",
+        "lon": 10.89,
+        "lat": 51.74,
+        "type": "reservoir"
+      },
+      "rimov": {
+        "title": "Rimov Reservoir",
+        "country": "Czechia",
+        "lon": 14.49,
+        "lat": 48.85,
+        "type": "reservoir"
+      },
+      "rotorua": {
+        "title": "Lake Rotorua",
+        "country": "New Zealand",
+        "lon": 176.28,
+        "lat": -38.08,
+        "type": "lake"
+      },
+      "sammamish": {
+        "title": "Lake Sammamish",
+        "country": "USA",
+        "lon": -122.1,
+        "lat": 47.59,
+        "type": "lake"
+      },
+      "sau": {
+        "title": "Sau Reservoir",
+        "country": "Spain",
+        "lon": 2.4,
+        "lat": 41.97,
+        "type": "reservoir"
+      },
+      "sparkling": {
+        "title": "Sparkling Lake",
+        "country": "USA",
+        "lon": -89.7,
+        "lat": 46.01,
+        "type": "lake"
+      },
+      "stechlin": {
+        "title": "Lake Stechlin",
+        "country": "Germany",
+        "lon": 13.03,
+        "lat": 53.17,
+        "type": "lake"
+      },
+      "sunapee": {
+        "title": "Lake Sunapee",
+        "country": "USA",
+        "lon": -72.5,
+        "lat": 43.23,
+        "type": "lake"
+      },
+      "tahoe": {
+        "title": "Lake Tahoe",
+        "country": "USA",
+        "lon": -120.03,
+        "lat": 39.09,
+        "type": "reservoir"
+      },
+      "tarawera": {
+        "title": "Lake Tarawera",
+        "country": "New Zealand",
+        "lon": 176.43,
+        "lat": -38.21,
+        "type": "lake"
+      },
+      "taupo": {
+        "title": "Lake Taupo",
+        "country": "New Zealand",
+        "lon": 175.89,
+        "lat": -38.8,
+        "type": "lake"
+      },
+      "toolik": {
+        "title": "Toolik Lake",
+        "country": "USA",
+        "lon": -149.6,
+        "lat": 68.63,
+        "type": "lake"
+      },
+      "trout-lake": {
+        "title": "Trout Lake",
+        "country": "USA",
+        "lon": -89.67,
+        "lat": 46.03,
+        "type": "lake"
+      },
+      "trout-bog": {
+        "title": "Trout Bog",
+        "country": "USA",
+        "lon": -89.69,
+        "lat": 46.04,
+        "type": "lake"
+      },
+      "two-sisters": {
+        "title": "Two Sisters Lake",
+        "country": "USA",
+        "lon": -89.53,
+        "lat": 45.77,
+        "type": "lake"
+      },
+      "vendyurskoe": {
+        "title": "Lake Vendyurskoe",
+        "country": "Russia",
+        "lon": 33.1,
+        "lat": 62.1,
+        "type": "lake"
+      },
+      "vortsjaerv": {
+        "title": "lake V\u00f5rtsj\u00e4rv",
+        "country": "Estonia",
+        "lon": 26.01,
+        "lat": 58.31,
+        "type": "lake"
+      },
+      "waahi": {
+        "title": "Lake Waahi",
+        "country": "New Zealand",
+        "lon": 175.07,
+        "lat": 37.33,
+        "type": "lake"
+      },
+      "washington": {
+        "title": "Lake Washington",
+        "country": "USA",
+        "lon": -122.27,
+        "lat": 47.64,
+        "type": "lake"
+      },
+      "windermere": {
+        "title": "Windermere",
+        "country": "United Kingdom",
+        "lon": -2.95,
+        "lat": 54.31,
+        "type": "lake"
+      },
+      "wingra": {
+        "title": "Lake Wingra",
+        "country": "USA",
+        "lon": -89.43,
+        "lat": 43.05,
+        "type": "lake"
+      },
+      "zlutice": {
+        "title": "Zlutice Reservoir",
+        "country": "Czechia",
+        "lon": 13.11,
+        "lat": 50.09,
+        "type": "reservoir"
+      }
+    },
+    "forest_stand": {
+      "hyytiala": {
+        "title": "Hyyti\u00e4l\u00e4",
+        "lat": 61.8475,
+        "lon": 24.295,
+        "country": "FI",
+        "type": "Even-aged conifer",
+        "species": [
+          "pisy",
+          "piab"
+        ],
+        "thinning": "below",
+        "comment": "Note that an experimental plot of pine contains a lot of data while footprint of flux tower is larger. Please note that the deciduous admixtures only appear in the data at a later stage and hence do not need to be simulated. Only simulate pine and spruce (no hard-woods) and regenerate as pure pine stand"
+      },
+      "peitz": {
+        "title": "Peitz",
+        "lat": 51.9166,
+        "lon": 14.35,
+        "country": "DE",
+        "type": "Even-aged conifer",
+        "species": [
+          "pisy"
+        ],
+        "thinning": "below",
+        "comment": "Managed using a weak thinning from below."
+      },
+      "solling-beech": {
+        "title": "Solling (beech)",
+        "lat": 51.77,
+        "lon": 9.57,
+        "country": "DE",
+        "type": "Even-aged deciduous",
+        "species": [
+          "fasy"
+        ],
+        "thinning": "above",
+        "comment": ""
+      },
+      "solling-spruce": {
+        "title": "Solling (spruce)",
+        "lat": 51.77,
+        "lon": 9.57,
+        "country": "DE",
+        "type": "Even-aged conifer",
+        "species": [
+          "piab "
+        ],
+        "thinning": "below",
+        "comment": ""
+      },
+      "soro": {
+        "title": "Sor\u00f8",
+        "lat": 55.485844,
+        "lon": 11.644616,
+        "country": "DK",
+        "type": "Even-aged deciduous",
+        "species": [
+          "fasy"
+        ],
+        "thinning": "above",
+        "comment": ""
+      },
+      "kroof": {
+        "title": "",
+        "lat": 48.25,
+        "lon": 11.4,
+        "country": "DE",
+        "type": "Mixed deciduous and conifers",
+        "species": [
+          "fasy",
+          "piab",
+          "acpl",
+          "lade",
+          "pisy",
+          "quro"
+        ],
+        "thinning": "below",
+        "comment": "Unmanaged/ thinning from below in past 20 years for all species."
+      },
+      "le-bray": {
+        "title": "Le Bray",
+        "lat": 44.71711,
+        "lon": -0.7693,
+        "country": "FR",
+        "type": "Even-aged conifer",
+        "species": [
+          "pipi"
+        ],
+        "thinning": "below",
+        "comment": ""
+      },
+      "collelongo": {
+        "title": "Collelongo",
+        "lat": 41.8494,
+        "lon": 13.5881,
+        "country": "IT",
+        "type": "Even-aged deciduous",
+        "species": [
+          "fasy"
+        ],
+        "thinning": "above",
+        "comment": ""
+      },
+      "bily-kriz": {
+        "title": "Biely Kr\u00ed\u017e",
+        "lat": 49.3,
+        "lon": 18.32,
+        "country": "CZ",
+        "type": "Even-aged conifer",
+        "species": [
+          "piab"
+        ],
+        "thinning": "below",
+        "comment": ""
+      }
+    },
+    "region": {
+      "global": {
+        "title": "Global simulation"
+      }
+    },
+    "detrending": {
+      "observed": {
+        "description": ""
+      },
+      "detrended": {
+        "description": ""
+      }
+    },
+    "soc_forcing": {},
+    "irrigation": {
+      "firr": {
+        "title": "Full irrigation",
+        "description": "Full irrigation, i.e. until the soil is saturated."
+      },
+      "cirr": {
+        "title": "Constrained irrigation",
+        "description": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "noirr": {
+        "title": "No irrigation (rainfed land)",
+        "description": "No irrigation. Both irrigation variations are required for the agro-economic models."
+      }
+    },
+    "river": {
+      "amazon": {},
+      "blue-nile": {},
+      "danube": {},
+      "darling": {},
+      "ganges": {},
+      "godavari": {},
+      "indus": {},
+      "lena": {},
+      "mackenzie": {},
+      "mississippi": {},
+      "niger": {},
+      "pajeu": {},
+      "rhine": {},
+      "tagus": {},
+      "yangtze": {},
+      "yellow": {}
+    },
+    "ocean_region": {
+      "north-sea": {
+        "title": "North Sea",
+        "north": 62.5,
+        "west": -4.5,
+        "south": 50.5,
+        "east": 9.5
+      },
+      "baltic-sea": {
+        "title": "Baltic Sea",
+        "north": 64.5,
+        "west": 15.5,
+        "south": 55.5,
+        "east": 23.5
+      },
+      "nw-med-sea": {
+        "title": "North-west Meditteranean",
+        "north": 43.5,
+        "west": -1.5,
+        "south": 36.5,
+        "east": 6.5
+      },
+      "adriatic-sea": {
+        "title": "Adriatic Sea",
+        "north": 45.5,
+        "west": 11.5,
+        "south": 39.5,
+        "east": 20.5
+      },
+      "med-glob": {
+        "title": "Mediterranean Sea",
+        "north": 45.5,
+        "west": -6.5,
+        "south": 29.5,
+        "east": 35.5
+      },
+      "se-australia": {
+        "title": "South-East Australia",
+        "north": -23.5,
+        "west": 120.5,
+        "south": -47.5,
+        "east": 170.5
+      },
+      "east-bass-strait": {
+        "title": "Eastern Bass Strait",
+        "north": -37.5,
+        "west": 145.5,
+        "south": -41.5,
+        "east": 151.5
+      },
+      "cook-strait": {
+        "title": "Cook Strait",
+        "north": -40.5,
+        "west": 174.5,
+        "south": -46.5,
+        "east": 179.5
+      },
+      "humboldt-n": {
+        "title": "North Humboldt Sea",
+        "north": 6.5,
+        "west": -93.5,
+        "south": -20.5,
+        "east": -69.5
+      }
+    },
+    "landuse_variable": {
+      "cropland_total": {
+        "file_name": "histsoc_landuse-totals_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "total cropland in a grid cell"
+      },
+      "cropland_rainfed": {
+        "file_name": "histsoc_landuse-totals_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "all of the rainfed cropland in a grid cell"
+      },
+      "cropland_irrigated": {
+        "file_name": "histsoc_landuse-totals_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "all of the irrigated cropland in a grid cell"
+      },
+      "pastures": {
+        "file_name": "histsoc_landuse-totals_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of pastures, both  managed or rangeland, in a grid cell"
+      },
+      "c3ann_rainfed": {
+        "file_name": "histsoc_landuse-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed C3 annual crops in a grid cell"
+      },
+      "c3ann_irrigated": {
+        "file_name": "histsoc_landuse-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated C3 annual crops in a grid cell"
+      },
+      "c3per_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed C3 perennial crops in a grid cell, these have not been further downscaled from the \"5 crops\" data"
+      },
+      "c3per_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated C3 perennial crops in a grid cell, these have not been further downscaled from the \"5 crops\" data"
+      },
+      "c3nfx_rainfed": {
+        "file_name": "histsoc_landuse-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed C3 nitrogen-fixing crops in a grid cell"
+      },
+      "c3nfx_irrigated": {
+        "file_name": "histsoc_landuse-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated C3 nitrogen-fixing crops in a grid cell"
+      },
+      "c4ann_rainfed": {
+        "file_name": "histsoc_landuse-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed C4 annual crops in a grid cell"
+      },
+      "c4ann_irrigated": {
+        "file_name": "histsoc_landuse-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated C4 annual crops in a grid cell"
+      },
+      "c4per_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed C4 perennial crops in a grid cell, currently this covers only sugarcane"
+      },
+      "c4per_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated C4  perennial crops in a grid cell, currently this covers only sugarcane"
+      },
+      "maize_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed maize in a grid cell"
+      },
+      "maize_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated maize in a grid cell"
+      },
+      "oil_crops_groundnut_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed oil crops (groundnut) in a grid cell"
+      },
+      "oil_crops_groundnut_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated oil crops (groundnut) in a grid cell"
+      },
+      "oil_crops_rapeseed_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed oil crops (groundnut) in a grid cel"
+      },
+      "oil_crops_rapeseed_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated oil crops (groundnut) in a grid cell"
+      },
+      "oil_crops_soybean_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed oil crops (soybean) in a grid cell"
+      },
+      "oil_crops_soybean_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated oil crops (soybean) in a grid cell"
+      },
+      "oil_crops_sunflower_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed oil crops (sunflower) in a grid cell"
+      },
+      "oil_crops_sunflower_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated oil crops (sunflower) in a grid cell"
+      },
+      "pulses_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed pulses in a grid cell"
+      },
+      "pulses_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated pulses in a grid cell"
+      },
+      "temperate_cereals_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed temperate cereals in a grid cell"
+      },
+      "temperate_cereals_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated temperate cereals in a grid cell"
+      },
+      "temperate_roots_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed temperate roots in a grid cell"
+      },
+      "temperate_roots_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of  irrigated temperate roots in a grid cell"
+      },
+      "tropical_cereals_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed tropical cereals in a grid cell"
+      },
+      "tropical_cereals_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated in tropical cereals a grid cell"
+      },
+      "tropical_roots_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed tropical roots in a grid cell"
+      },
+      "tropical_roots_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated tropical roots in a grid cell"
+      },
+      "others_c3ann_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed C3 annual crops not covered by the above in a grid cell"
+      },
+      "others_c3ann_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated  rainfed C3 annual crops not covered by the above in a grid cell"
+      },
+      "others_c3nfx_rainfed": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rainfed C3 N-fixing crops not covered by the above in a grid cell"
+      },
+      "others_c3nfx_irrigated": {
+        "file_name": "histsoc_landuse-15crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of irrigated C3 N-fixing crops not covered by the above in a grid cell"
+      },
+      "managed_pastures": {
+        "file_name": "histsoc_landuse-pastures_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of managed pastures in a grid cell"
+      },
+      "rangeland": {
+        "file_name": "histsoc_landuse-pastures_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of rangeland in a grid cell"
+      },
+      "urbanareas": {
+        "file_name": "histsoc_landuse-urbanareas_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "share of urban areas in a grid cell"
+      },
+      "fertl_c3ann": {
+        "file_name": "",
+        "time_period": "1861 \u2013 2018",
+        "unit": "1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual",
+        "comment": "deposition of N through fertilizer on cropland with C3 annual crops"
+      },
+      "fertl_c3per": {
+        "file_name": "histsoc_n-fertilizer-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "kg ha-1 yr-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "deposition of N through fertilizer on cropland with C3 perennial crops"
+      },
+      "fertl_c3nfx": {
+        "file_name": "histsoc_n-fertilizer-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "kg ha-1 yr-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "deposition of N through fertilizer on cropland with C3 N-fixing crops"
+      },
+      "fertl_c4ann": {
+        "file_name": "histsoc_n-fertilizer-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "kg ha-1 yr-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "deposition of N through fertilizer on cropland with C4 annual crops"
+      },
+      "fertl_c4per": {
+        "file_name": "histsoc_n-fertilizer-5crops_annual_1861_2018.nc",
+        "time_period": "1861 \u2013 2018",
+        "unit": "kg ha-1 yr-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "deposition of N through fertilizer on cropland with C4 perennial crops"
+      }
+    },
+    "soc_scenario": {
+      "histsoc": {
+        "description": "Varying historical land use, nitrogen deposition and fertilizer input."
+      },
+      "2015soc": {
+        "description": "Fixed year-2015 land use, nitrogen deposition and fertilizer input."
+      },
+      "nosoc": {
+        "description": "No direct human influences except for varying land use changes up to 2015."
+      }
+    },
+    "fishing_type": {
+      "fishing": {
+        "title": "",
+        "description": ""
+      },
+      "no-fishing": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "diazotroph_scenario": {
+      "w-diaz": {
+        "title": "",
+        "description": ""
+      },
+      "wo-diaz": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "variable": {
+      "qtot": {
+        "title": "Runoff",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": {
+          "biomes": "monthly",
+          "permafrost": "monthly",
+          "water_global": "daily",
+          "water_regional": "daily"
+        },
+        "comment": "Total runoff leaving the land portion of the grid cell",
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "biomes",
+          "permafrost"
+        ]
+      },
+      "qs": {
+        "title": "Surface runoff",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "The total surface runoff leaving the land portion of the grid cell.",
+        "sectors": [
+          "biomes",
+          "water_global",
+          "water_regional",
+          "permafrost"
+        ]
+      },
+      "qsb": {
+        "title": "Subsurface runoff",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Sum of water that flows out from subsurface layer(s) including the groundwater layer (if present). Equals qg in case of a groundwater layer below only one soil layer.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "qr": {
+        "title": "Groundwater recharge",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Water that percolates through the soil layer(s) into the groundwater layer. In case seepage is simulated but no groundwater layer is present, report seepage as qr and qg.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "qg": {
+        "title": "Groundwater runoff",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Water that leaves the groundwater layer. In case seepage is simulated but no groundwater layer is present, report seepage as qr and qg.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "dis": {
+        "title": "Discharge (gridded)",
+        "unit": "m3 s-1",
+        "resolution": {
+          "water_global": "0.5\u00b0 grid",
+          "water_regional": "at gauge locations"
+        },
+        "frequency": "daily",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "maxdis": {
+        "title": "Monthly maximum of daily discharge ",
+        "unit": "m3 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Optional variable \u2013 please report if daily discharge data is not reported.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "mindis": {
+        "title": "Monthly minimum of daily discharge ",
+        "unit": "m3 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Optional variable \u2013 please report if daily discharge data is not reported.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "evap": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "",
+          "water_global": "",
+          "water_regional": ""
+        },
+        "title": "Evapotranspiration",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "water_global": "0.5\u00b0 grid",
+          "water_regional": "average for basin until gauge location"
+        },
+        "frequency": {
+          "biomes": "daily, monthly",
+          "forestry": "daily, monthly",
+          "water_global": "monthly",
+          "water_regional": "monthly"
+        },
+        "comment": "Sum of transpiration, evaporation, interception and sublimation.",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "potevap": {
+        "title": "Potential Evapotranspiration",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "water_global": "0.5\u00b0 grid",
+          "water_regional": "average for basin until gauge location"
+        },
+        "frequency": "monthly",
+        "comment": "As Evap, but with all resistances set to zero, except the aerodynamic resistance.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "soilmoist": {
+        "title": "Soil moisture for each layer",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": {
+          "biomes": "daily",
+          "forestry": "daily",
+          "permafrost": "daily",
+          "water_global": "monthly",
+          "water_regional": "monthly"
+        },
+        "comment": "If possible, please provide soil moisture for all depth layers (i.e. 3D-field), and indicate depth in m. Otherwise, provide soil moisture of entire column.",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "water_global",
+          "water_regional",
+          "permafrost"
+        ]
+      },
+      "rootmoist": {
+        "title": "Soil moisture, root zone",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Total simulated soil moisture available for evapotranspiration. If simulated by the model. Please indicate the depth of the root zone for each vegetation type in your model. If depth varies over time or space",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "soilmoistfroz": {
+        "title": "Frozen soil moisture for each layer",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Please provide soil moisture for all depth levels and indicate depth in m. Please provide for purposes of permafrost sector.",
+        "sectors": [
+          "biomes",
+          "water_global",
+          "water_regional",
+          "permafrost"
+        ]
+      },
+      "tsl": {
+        "title": "Temperature of Soil",
+        "unit": "K",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "water_global": "0.5\u00b0 grid",
+          "water_regional": "0.5\u00b0 grid",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": {
+          "biomes": "daily, monthly",
+          "forestry": "daily, monthly",
+          "water_global": "daily, monthly",
+          "water_regional": "daily, monthly",
+          "permafrost": "daily, monthly"
+        },
+        "comment": "Temperature of each soil layer. Reported as \"missing\" for grid cells occupied entirely by \"sea\".",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "water_global",
+          "water_regional",
+          "permafrost"
+        ]
+      },
+      "snd": {
+        "title": "Snow depth",
+        "unit": "m",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Grid cell mean depth of snowpack.",
+        "sectors": [
+          "biomes",
+          "water_global",
+          "water_regional",
+          "permafrost"
+        ]
+      },
+      "swe": {
+        "title": "Snow water equivalent",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Total water mass of the snowpack (liquid or frozen) averaged over grid cell.",
+        "sectors": [
+          "biomes",
+          "water_global",
+          "water_regional",
+          "permafrost"
+        ]
+      },
+      "tws": {
+        "title": "Total water storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in all compartments. Please indicate in the netcdf metadata which storage compartments are considered.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "canopystor": {
+        "title": "Canopy water storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in the canopy.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "glacierstor": {
+        "title": "Glacier storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in glaciers.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "groundwstor": {
+        "title": "Groundwater storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in groundwater layer.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "lakestor": {
+        "title": "Lake storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in lakes (except reservoirs).",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "wetlandstor": {
+        "title": "Wetland storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in wetlands.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "reservoirstor": {
+        "title": "Reservoir storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in reservoirs.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "riverstor": {
+        "title": "Reservoir storage",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water storage in rivers.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "thawdepth": {
+        "title": "Annual maximum thaw depth",
+        "unit": "m",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": {
+          "biomes": "annual",
+          "permafrost": "annual",
+          "water_global": "monthly",
+          "water_regional": "monthly"
+        },
+        "comment": "Calculated from daily thaw depths.",
+        "sectors": [
+          "biomes",
+          "water_global",
+          "water_regional",
+          "permafrost"
+        ]
+      },
+      "triver": {
+        "title": "River temperature",
+        "unit": "kg m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Mean monthly water temperature in river (representative of the average temperature across the channel volume).",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "rainf": {
+        "title": "Rainfall",
+        "unit": " kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Required for test purposes only. If you need to reduce output data volumes, please provide these variables only once, with the first (test) data set you submit, e.g. for the first decade of each experiment. NOTE: rainf + snowf = total precipitation",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "snowf": {
+        "title": "Snowfall",
+        "unit": " kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Required for test purposes only. If you need to reduce output data volumes, please provide these variables only once, with the first (test) data set you submit, e.g. for the first decade of each experiment. NOTE: rainf + snowf = total precipitation",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "pirrww": {
+        "extension": {
+          "agriculture": "<crop>-<irrigation>",
+          "water_global": "",
+          "water_regional": ""
+        },
+        "title": "Irrigation water withdrawal (assuming unlimited water supply)",
+        "unit": {
+          "agriculture": "mm per growing season",
+          "water_global": "kg m-2 s-1",
+          "water_regional": "kg m-2 s-1"
+        },
+        "resolution": "0.5\u00b0 grid",
+        "frequency": {
+          "agriculture": "seasonal",
+          "water_global": "monthly",
+          "water_regional": "monthly"
+        },
+        "comment": "Irrigation water withdrawn in case of optimal irrigation (in addition to rainfall), assuming no losses in conveyance and application.",
+        "sectors": [
+          "agriculture",
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "airrww": {
+        "title": "Actual irrigation water withdrawal",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Irrigation water withdrawal, taking water availability into account; please provide if computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "pirruse": {
+        "title": "Potential irrigation water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Portion of withdrawal that is evapo-transpired, assuming unlimited water supply.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "airruse": {
+        "title": "Actual irrigation water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Portion of withdrawal that is evapo-transpired, taking water availability into account; if computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "airrusegreen": {
+        "title": "Actual green water consumption on irrigated cropland",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Actual evapotranspiration from rainwater over irrigated cropland; if computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "pirrusegreen": {
+        "title": "Potential green water consumption on irrigated cropland",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Potential evapotranspiration from rainwater over irrigated cropland; if computed and different from AIrrUseGreen.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "arainfusegreen": {
+        "title": "Actual green water consumption on rainfed cropland",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Actual evapotranspiration from rainwater over rainfed cropland; if computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "adomww": {
+        "title": "Actual domestic water withdrawal",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "adomuse": {
+        "title": "Actual domestic water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "amanww": {
+        "title": "Actual manufacturing water withdrawal",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "amanuse": {
+        "title": "Actual manufacturing water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "aelecww": {
+        "title": "Actual electricity water withdrawal",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "aelecuse": {
+        "title": "Actual electricity water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "aliveww": {
+        "title": "Actual livestock water withdrawal",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "aliveuse": {
+        "title": "Actual livestock water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "atotww": {
+        "title": "Total (all sectors) actual water withdrawal",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "If computed.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "atotuse": {
+        "title": "Total (all sectors) actual water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Sum of actual water consumption from all sectors. Please indicate in metadata which sectors are included.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "ptotww": {
+        "title": "Total (all sectors) potential water withdrawal",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Sum of potential (i.e. assuming unlimited water supply) water withdrawal from all sectors. Please indicate in metadata which sectors are included.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "ptotuse": {
+        "title": "Total (all sectors) potential water consumption",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Sum of potential (i.e. assuming unlimited water supply) water consumption from all sectors. Please indicate in metadata which sectors are included.",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "soil": {
+        "title": "Soil types",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "constant",
+        "comment": "Soil types or texture classes as used by your model. Please include a description of each type or class, especially if these are different from the standard HSWD and GSWP3 soil types. Please also include a description of the parameters and values associated with these soil types (parameter values could be submitted as spatial fields where appropriate).",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "admeluse": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "pidmelww": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "pidmeluse": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "transp": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "ainduse": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "aindww": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "qbaseflow": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "pr": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "gwrecharge": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "yield": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Crop yields",
+        "unit": "dry matter (t ha-1 per growing season)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "Crop-specific: Yield may be identical to above-ground biomass (biom) if the entire plant is harvested, e.g. for bioenergy production.",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "aet": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Actual evapotranspiration",
+        "unit": "mm per growing season",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "Portion of all water (including rain) that is evapo-transpired, the water amount should be accumulated over the entire growing period (not the calendar year)",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "initr": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Nitrogen application rate",
+        "unit": "kg ha-1 per growing season",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "Total nitrogen application rate. If organic and inorganic amendments are applied, rate should be reported as effective inorganic nitrogen input (ignoring residues).",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "plantday": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Actual planting dates",
+        "unit": "Day of year",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "anthday": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Anthesis dates",
+        "unit": "Days from planting date",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "matyday": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Maturity dates",
+        "unit": "Days from planting date",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "harvday": {
+        "extension": "<crop>-<irrigation>",
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "biom": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Above ground biomass (dry matter)",
+        "unit": "t ha-1 per growing season",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "The whole plant biomass above ground.",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "sco2": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Soil carbon emissions ",
+        "unit": "kg C ha-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "Ideally should be modeled with realistic land-use history and initial carbon pools. Subject to extra study.",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "sn2o": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Nitrous oxide emissions",
+        "unit": "kg N2O-N ha-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "seasonal",
+        "comment": "Ideally should be modeled with realistic land-use history and initial carbon pools. Subject to extra study.",
+        "sectors": [
+          "agriculture",
+          "water_global"
+        ]
+      },
+      "tnup": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Total N uptake (total growing season sum)",
+        "unit": "kg ha -1 yr -1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Nitrogen balance: uptake",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "tnin": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Total N inputs (total growing season sum)",
+        "unit": "kg ha -1 yr -1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Nitrogen balance: inputs",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "tnloss": {
+        "extension": "<crop>-<irrigation>",
+        "title": "Total N losses (total growing season sum)",
+        "unit": "kg ha -1 yr -1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Nitrogen balance: losses",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "leach": {
+        "title": "",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "gsprcp": {
+        "title": "",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "gsrsds": {
+        "title": "",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "sumt": {
+        "title": "",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "amphibianprob": {
+        "title": "Amphibian species probability of occurrence",
+        "unit": "Probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "birdprob": {
+        "title": "Terrestrial bird species probability of occurrence",
+        "unit": "Probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "mammalprob": {
+        "title": "Terrestrial mammal species probability of occurrence",
+        "unit": "Probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "amphibiansumprob": {
+        "title": "Amphibian summed probability of occurrence",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "birdsumprob": {
+        "title": "Terrestrial bird summed probability of occurrence ",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "mammalsumprob": {
+        "title": "Terrestrial mammal summed probability of occurrence",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "endamphibiansumprob": {
+        "title": "Summed probability of endemic amphibian species",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "endbirdsumprob": {
+        "title": "Summed probability of endemic terrestrial bird species",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "endmammalsumprob": {
+        "title": "Summed probability of endemic terrestrial mammal species",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "thramphibiansumprob": {
+        "title": "Summed probability of threatened amphibian species",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "thrbirdsumprob": {
+        "title": "Summed probability of threatened terrestrial bird species",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "thrmammalsumprob": {
+        "title": "Summed probability of threatened terrestrial mammal species",
+        "unit": "Summed probability of occurrence per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Aggregated results from individual SDMs assuming no dispersal.",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "amphibiansr": {
+        "title": "Amphibian species richness",
+        "unit": "Estimated number of species (species richness) per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Results from macroecological richness models",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "birdsr": {
+        "title": "Terrestrial bird species richness",
+        "unit": "Estimated number of species (species richness) per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Results from macroecological richness models",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "mammalsr": {
+        "title": "Terrestrial mammal species richness",
+        "unit": "Estimated number of species (species richness) per cell",
+        "dimensions": "(time,lat,lon,?)",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "30year-mean",
+        "comment": "Results from macroecological richness models",
+        "sectors": [
+          "biodiversity"
+        ]
+      },
+      "cveg": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in Vegetation",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": {
+          "biomes": "Grid cell total is essential. Per PFT information is desirable.",
+          "forestry": "As kg carbon*m-2",
+          "permafrost": "Grid cell total is essential. Per PFT information is desirable."
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "cvegag": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in aboveground vegetation biomass",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": {
+          "biomes": "Grid cell total is essential. Per PFT information is desirable.",
+          "forestry": "As kg carbon*m-2",
+          "permafrost": "Grid cell total is essential. Per PFT information is desirable."
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "cvegbg": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in belowground vegetation biomass",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": {
+          "biomes": "Grid cell total is essential. Per PFT information is desirable.",
+          "forestry": "As kg carbon*m-2",
+          "permafrost": "Grid cell total is essential. Per PFT information is desirable."
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "clitter": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in Litter Pool",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": {
+          "biomes": "Grid cell total is essential. Per PFT information is desirable. Info for each individual pool.",
+          "forestry": "As kg carbon*m-2, Info for each individual pool.",
+          "permafrost": "Grid cell total is essential. Per PFT information is desirable. Info for each individual pool."
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "csoil": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in Soil Pool",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": {
+          "biomes": "Grid cell total is essential. Per PFT information is desirable. Info for each individual pool.",
+          "forestry": "As kg carbon*m-2, Info for each individual soil layer.",
+          "permafrost": "Grid cell total is essential. Per PFT information is desirable. Info for each individual pool."
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "gpp": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass Flux out of Atmosphere due to Gross Primary Production on Land",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "daily, monthly",
+        "comment": {
+          "biomes": "",
+          "forestry": "As kg carbon*m-2*s-1"
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "ra": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass Flux into Atmosphere due to Autotrophic (Plant) Respiration on Land",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "daily, monthly",
+        "comment": {
+          "biomes": "",
+          "forestry": "As kg carbon*m-2*s-1"
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "npp": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass Flux out of Atmosphere due to Net Primary Production on Land",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "daily, monthly",
+        "comment": {
+          "biomes": "",
+          "forestry": "As kg carbon*m-2*s-1"
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "npplandleaf": {
+        "extension": "<pft>",
+        "title": "Net Primary Production on Land allocated to leaf biomass",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "",
+        "sectors": [
+          "biomes"
+        ]
+      },
+      "npplandroot": {
+        "extension": "<pft>",
+        "title": "Net Primary Production on Land allocated to fine root biomass",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "",
+        "sectors": [
+          "biomes"
+        ]
+      },
+      "nppabovegroundwood": {
+        "extension": "<pft>",
+        "title": "Net Primary Production on Land allocated to above ground wood biomass",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "",
+        "sectors": [
+          "biomes"
+        ]
+      },
+      "nppbelowgroundwood": {
+        "extension": "<pft>",
+        "title": "Net Primary Production on Land allocated to below ground wood biomass",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "",
+        "sectors": [
+          "biomes"
+        ]
+      },
+      "rh": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "total",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass Flux into Atmosphere due to Heterotrophic Respiration on Land",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "daily, monthly",
+        "comment": {
+          "biomes": "",
+          "forestry": "As kg carbon*m-2*s-1"
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "fireint": {
+        "extension": "<pft>",
+        "title": "Carbon Mass Flux into Atmosphere due to CO2 Emission from Fire",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "",
+        "sectors": [
+          "biomes",
+          "permafrost"
+        ]
+      },
+      "firefrac": {
+        "extension": "<pft>",
+        "title": "Fraction of cell burnt by fire",
+        "unit": "Fractional",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "Burnt area fraction: single value for each scenario corresponding to year 2100",
+        "sectors": [
+          "biomes",
+          "permafrost"
+        ]
+      },
+      "ecoatmflux": {
+        "extension": "<pft>",
+        "title": "Carbon Mass Flux out of Atmosphere due to Net Biospheric Production on Land",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "This is the net mass flux of carbon between land and atmosphere calculated as photosynthesis MINUS the sum of plant and soil respiration, carbonfluxes from fire, harvest, grazing and land use change. Positive flux is into the land.",
+        "sectors": [
+          "biomes",
+          "permafrost"
+        ]
+      },
+      "rr": {
+        "extension": "<pft>",
+        "title": "Root autotrophic respiration",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand"
+        },
+        "frequency": {
+          "biomes": "daily, monthly",
+          "forestry": "daily"
+        },
+        "comment": {
+          "biomes": "",
+          "forestry": "As kg carbon*m-2*s-1"
+        },
+        "sectors": [
+          "biomes",
+          "forestry"
+        ]
+      },
+      "fapar": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Fraction of absorbed photosynthetically active radiation",
+        "unit": "%",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "daily, monthly",
+        "comment": "Value between 0 and 100.",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "lai": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>",
+          "water_global": "",
+          "water_regional": ""
+        },
+        "title": "Leaf Area Index",
+        "unit": "1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand and 0.5\u00b0 grid average",
+          "permafrost": "0.5\u00b0 grid",
+          "water_global": "0.5\u00b0 grid",
+          "water_regional": "0.5\u00b0 grid"
+        },
+        "frequency": {
+          "biomes": "daily, monthly",
+          "forestry": "monthly",
+          "permafrost": "daily, monthly",
+          "water_global": "constant or monthly",
+          "water_regional": "constant or monthly"
+        },
+        "comment": {
+          "biomes": "",
+          "forestry": "",
+          "permafrost": "",
+          "water_global": "If used by, or computed by the model.",
+          "water_regional": "If used by, or computed by the model."
+        },
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost",
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "pft": {
+        "extension": "<pft>",
+        "title": "Plant Functional Type Grid Fraction",
+        "unit": "%",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "annual (or constant if static)",
+        "comment": "The categories may differ from model to model, depending on their PFT definitions. This may include natural PFTs, anthropogenic PFTs, bare soil, lakes, urban areas, etc. Sum of all should equal the fraction of the grid cell that is land.",
+        "sectors": [
+          "biomes",
+          "permafrost"
+        ]
+      },
+      "intercep": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>"
+        },
+        "title": "Evaporation from Canopy (interception)",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand"
+        },
+        "frequency": "daily, monthly",
+        "comment": "The canopy evaporation+sublimation (if present in model).",
+        "sectors": [
+          "biomes",
+          "forestry"
+        ]
+      },
+      "esoil": {
+        "title": "Water Evaporation from Soil",
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "water_global": "0.5\u00b0 grid",
+          "water_regional": "0.5\u00b0 grid"
+        },
+        "frequency": "daily, monthly",
+        "comment": "Includes sublimation.",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "trans": {
+        "title": "Transpiration",
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>"
+        },
+        "unit": "kg m-2 s-1",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand"
+        },
+        "frequency": {
+          "biomes": "daily, monthly",
+          "forestry": "daily"
+        },
+        "comment": "",
+        "sectors": [
+          "biomes",
+          "forestry"
+        ]
+      },
+      "cleaf": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in Leaves",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "cwood": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in Wood",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": "Including sapwood and hardwood.",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "croot": {
+        "extension": {
+          "biomes": "<pft>",
+          "forestry": "<species>",
+          "permafrost": "<pft>"
+        },
+        "title": "Carbon Mass in Roots",
+        "unit": "kg m-2",
+        "resolution": {
+          "biomes": "0.5\u00b0 grid",
+          "forestry": "stand",
+          "permafrost": "0.5\u00b0 grid"
+        },
+        "frequency": "annual",
+        "comment": "Including fine and coarse roots.",
+        "sectors": [
+          "biomes",
+          "forestry",
+          "permafrost"
+        ]
+      },
+      "burntarea": {
+        "title": "Burnt Area Fraction",
+        "unit": "%",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "daily, monthly",
+        "comment": "Fraction of entire grid cell that is covered by burnt vegetation.",
+        "sectors": [
+          "biomes",
+          "permafrost"
+        ]
+      },
+      "dbh": {
+        "extension": "<species>",
+        "title": "Mean DBH",
+        "unit": "cm",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "dbhdomhei": {
+        "title": "Mean DBH of 100 highest trees",
+        "unit": "cm",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "100 highest trees per hectare.",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "hei": {
+        "extension": "<species>",
+        "title": "Stand Height",
+        "unit": "ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "For models including natural regeneration this variable may not make sense, please report domhei.",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "domhei": {
+        "title": "Dominant Height",
+        "unit": "m2 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "Mean height of the 100 highest trees per hectare.",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "density": {
+        "extension": "<species>",
+        "title": "Stand Density",
+        "unit": "m2 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "ba": {
+        "extension": "<species>",
+        "title": "Basal Area",
+        "unit": "m2 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "mort": {
+        "extension": "<species>",
+        "title": "Volume of Dead Trees",
+        "unit": "m3 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "harv": {
+        "extension": "<species>",
+        "title": "Harvest by DBH-class",
+        "unit": "m3 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "DBH class resolution: Either DBH classes or total",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "stemno": {
+        "extension": "<species>",
+        "title": "Remaining stem number after disturbance and management by dbh class",
+        "unit": "ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "DBH class resolution: Either DBH classes or total",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "vol": {
+        "extension": "<species>",
+        "title": "Stand Volume",
+        "unit": "m3 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "age": {
+        "extension": "<species>",
+        "title": "Tree age by dbh class",
+        "unit": "yr",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "DBH class resolution: Either DBH classes or total",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "nee": {
+        "extension": "total",
+        "title": "Net Ecosystem Exchange",
+        "unit": "kg m-2 s-1",
+        "resolution": "stand",
+        "frequency": "daily, monthly",
+        "comment": "As kg carbon*m-2*s-1",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "mai": {
+        "extension": "<species>",
+        "title": "Mean Annual Increment",
+        "unit": "m3 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "species": {
+        "extension": "<species>",
+        "title": "Species composition",
+        "unit": "%",
+        "resolution": "per ha",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "mortstemno": {
+        "extension": "<species>",
+        "title": "Removed stem numbers by size class by natural mortality",
+        "unit": "ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "As trees per hectare.",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "harvstemno": {
+        "extension": "<species>",
+        "title": "Removed stem numbers by size class by management",
+        "unit": "ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "As trees per hectare.",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "dist": {
+        "extension": "<dist-name>",
+        "title": "Volume of disturbance damage",
+        "unit": "m3 ha-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "nlit": {
+        "extension": "<species>",
+        "title": "Nitrogen of annual Litter",
+        "unit": "g m-2 a-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "As g Nitrogen m-2 a-1",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "nsoil": {
+        "extension": "total",
+        "title": "Nitrogen in Soil",
+        "unit": "g m-2 a-1",
+        "resolution": "stand",
+        "frequency": "annual",
+        "comment": "As g Nitrogen m-2 a-1",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "nppleaf": {
+        "extension": "<species>",
+        "title": "Net Primary Production allocated to leaf biomass",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "npproot": {
+        "extension": "<species>",
+        "title": "Net Primary Production allocated to fine root biomass",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "nppagwood": {
+        "extension": "<species>",
+        "title": "Net Primary Production allocated to above ground wood biomass",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "nppbgwood": {
+        "extension": "<species>",
+        "title": "Net Primary Production allocated to below ground wood biomass",
+        "unit": "",
+        "resolution": "",
+        "comment": "",
+        "sectors": [
+          "forestry"
+        ]
+      },
+      "strat": {
+        "title": "Thermal stratification",
+        "unit": "1",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily",
+        "comment": "1 if lake grid cell is thermally stratified, 0 if lake grid cell is not thermally stratified",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "thermodepth": {
+        "title": "Depth of Thermocline",
+        "unit": "m",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily",
+        "comment": "Depth corresponding the maximum water density gradient",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "watertemp": {
+        "title": "Water temperature",
+        "unit": "K",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily",
+        "comment": "Depth resolution: Full Profile. Simulated water temperature. Layer averages and full profiles.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "surftemp": {
+        "title": "Surface temperature",
+        "unit": "K",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Average of the upper layer in case not simulated directly.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "bottemp": {
+        "title": "Bottom temperature",
+        "unit": "K",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Average of the lowest layer in case not simulated directly.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "ice": {
+        "title": "Lake ice cover",
+        "unit": "1",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily",
+        "comment": "1 if ice cover is present in lake grid cell, 0 if no ice cover is present in lake grid cell",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "lakeicefrac": {
+        "title": "Lake layer ice mass fraction",
+        "unit": "1",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Mean epi. Fraction of mass of a given layer taken up by ice.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "icethick": {
+        "title": "Ice thickness",
+        "unit": "m",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "snowthick": {
+        "title": "Snow thickness",
+        "unit": "m",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "icetemp": {
+        "title": "Temperature at the ice upper surface",
+        "unit": "K",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily",
+        "comment": "",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "snowtemp": {
+        "title": "Temperature at the snow upper surface",
+        "unit": "K",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily",
+        "comment": "",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "sensheatf": {
+        "title": "Sensible heat flux at the lake-atmosphere interface",
+        "unit": "W m-2",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "At the surface of snow, ice or water depending on the layer in contact with the atmosphere. Positive if upwards.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "latentheatf": {
+        "title": "Latent heat flux at the lake-atmosphere interface",
+        "unit": "W m-2",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "At the surface of snow, ice or water depending on the layer in contact with the atmosphere. Positive if upwards.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "momf": {
+        "title": "Momentum flux at the lake-atmosphere interface",
+        "unit": "kg m-1 s-2",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "At the surface of snow, ice or water depending on the layer in contact with the atmosphere. Positive if upwards.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "swup": {
+        "title": "Upward shortwave radiation flux at the lake-atmosphere interface",
+        "unit": "W m-2",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "At the surface of snow, ice or water depending on the layer in contact with the atmosphere. Positive if upwards. Not to be confused with net shortwave radiation.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "lwup": {
+        "title": "Upward longwave radiation flux at the lake-atmosphere interface",
+        "unit": "W m-2",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "At the surface of snow, ice or water depending on the layer in contact with the atmosphere. Positive if upwards. Not to be confused with net longwave radiation.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "lakeheatf": {
+        "title": "Downward heat flux at the lake-atmosphere interface",
+        "unit": "W m-2",
+        "resolution": "Representative lake associated with grid cell",
+        "comment": "At the surface of snow, ice or water depending on the layer in contact with the atmosphere. Positive if upwards. the residual term of the surface energy balance, i.e. the net amount of energy that enters the lake on daily time scale: lakeheatf = swdown - swup + lwdown - lwup - sensheatf - latenheatf (terms defined positive when directed upwards)",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "turbdiffheat": {
+        "title": "Turbulent diffusivity of heat",
+        "unit": "m2 s-1",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Only if computed by the model.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "albedo": {
+        "title": "Surface albedo",
+        "unit": "1",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Albedo of the surface interacting with the atmosphere (water, ice or snow).",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "extcoeff": {
+        "title": "Light extinction coefficient",
+        "unit": "m-1",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "constant",
+        "comment": "Only to be reported for global models, local models should use extcoeff as input.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "sedheatf": {
+        "title": "Sediment upward heat flux at the lake-sediment interface",
+        "unit": "W m-2",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Positive if upwards. Only if computed by the model.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "chl": {
+        "title": "Chlorophyll Concentration",
+        "unit": "g-3 m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Total water chlorophyll concentration \u2013 indicator of phytoplankton.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "phytobio": {
+        "title": "Phytoplankton Functional group biomass",
+        "unit": "mole m-3 as carbon",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Different models will have different numbers of functional groups so that the reporting of these will vary by model.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "zoobio": {
+        "title": "Phytoplankton Functional group biomass",
+        "unit": "mole m-3 as carbon",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Total simulated Zooplankton biomass.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "tp": {
+        "title": "Total Phosphorus",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "pp": {
+        "title": "Particulate Phosphorus",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "tpd": {
+        "title": "Total Dissolved Phosphorus",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Some models may also output data for soluble reactive phosphorus (SRP).",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "tn": {
+        "title": "Total Nitrogen",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "pn": {
+        "title": "Particulate Nitrogen",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "tdn": {
+        "title": "Total Dissolved Nitrogen",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Some models may also output data for Nitrate (N02) nitrite (NO3) and ammonium (NH4).",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "do": {
+        "title": "Dissolved Oxygen",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "doc": {
+        "title": "Dissolved Organic Carbon",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Not always available.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "si": {
+        "title": "Dissolved Silica",
+        "unit": "mole m-3",
+        "resolution": "Representative lake associated with grid cell",
+        "frequency": "daily, monthly",
+        "comment": "Depth resolution: Either full profile, or mean epi and mean hypo. Not always available.",
+        "sectors": [
+          "lakes_global",
+          "lakes_local"
+        ]
+      },
+      "tsb": {
+        "title": "TOTAL system biomass density ",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "all primary producers and consumers",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "tcb": {
+        "title": "TOTAL consumer biomass density ",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "all consumers (trophic level >1, vertebrates and invertebrates)",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "b10cm": {
+        "title": "Biomass density of consumers >10cm ",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "if L infinity is >10 cm, include in >10 cm class",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "b30cm": {
+        "title": "Biomass density of consumers >30cm",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "if L infinity is >30 cm, include in >30 cm class",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "tc": {
+        "title": "TOTAL Catch (all commercial functional groups / size classes)",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "catch at sea (commercial landings plus discards, fish and invertebrates)",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "tla": {
+        "title": "TOTAL Landings (all commercial functional groups / size classes)",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "commercial landings (catch without discards, fish and invertebrates)",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "bcom": {
+        "title": "Biomass density of commercial species ",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Discarded species not included (Fish and invertebrates)",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "blarge": {
+        "title": "Biomass density of large consumers >90cm and <100kg",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "bmed": {
+        "title": "Biomass density of medium consumers >30cm and <90cm",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "bsmall": {
+        "title": "Biomass density of small consumers <30cm",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "b": {
+        "extension": "<class>-<group>",
+        "title": "Biomass density (by functional group / size class) ",
+        "unit": "g C m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Provide name of each size class (<class>) and functional group (<group>) used, and provide a definition of each class/group.",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "clarge": {
+        "title": "Catch of large consumers >90cm and <100kg",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "cmed": {
+        "title": "Catch of medium consumers >30cm and <90cm",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "csmall": {
+        "title": "Catch of small consumers <30cm",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "c": {
+        "extension": "<class>-<group>",
+        "title": "Catch (by functional group / size class) ",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "Provide name of each size class (<class>) and functional group (<group>) used, and provide a definition of each class/group.",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "tc10cm": {
+        "title": "TOTAL Catch of consumers >10cm",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "tc30cm": {
+        "title": "TOTAL Catch of consumers >30cm",
+        "unit": "g m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "qrecharge": {
+        "title": "",
+        "unit": "",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": "monthly",
+        "comment": "",
+        "sectors": [
+          "water_global",
+          "water_regional"
+        ]
+      },
+      "ancold": {
+        "extension": "<r>",
+        "title": "Number of deaths attributable to cold",
+        "unit": "1",
+        "dimensions": "(time,lat,lon), (time,location)",
+        "resolution": "0.5\u00b0 grid, location",
+        "frequency": "daily",
+        "comment": "For ERF models, this occurs when temperature is below threshold (e.g., minimum mortality temperature (MMT)). Report 0 if temperature above threshold. Can have gender, age, etc. dimensions; see below.",
+        "sectors": [
+          "health"
+        ]
+      },
+      "anheat": {
+        "extension": "<r>",
+        "title": "Number of deaths attributable to heat",
+        "unit": "1",
+        "dimensions": "(time,lat,lon), (time,location)",
+        "resolution": "0.5\u00b0 grid, location",
+        "frequency": "daily",
+        "comment": "Temperature above threshold (ERFs). Report 0 if temperature below threshold. Can have gender, age, etc. dimensions; see below.",
+        "sectors": [
+          "health"
+        ]
+      },
+      "btm": {
+        "title": "Baseline total mortality ",
+        "unit": "1",
+        "dimensions": "(time,lat,lon), (time,location)",
+        "resolution": "0.5\u00b0 grid, location",
+        "frequency": "daily",
+        "comment": "To be reported as annual series of mean daily total mortality, or as a single number of mean daily mortality; to be used for computations of attributable fractions. Can have gender, age, etc. dimensions; see below.",
+        "sectors": [
+          "health"
+        ]
+      },
+      "pop": {
+        "title": "Population",
+        "unit": "1",
+        "dimensions": "(time,lat,lon), (time,location)",
+        "resolution": "0.5\u00b0 grid, location",
+        "frequency": "annual, 5-year intervals",
+        "comment": "Baseline population data should be provided for computations of mortality rates (i.e. deaths per total population). See Section \u200e5.1.6. Can have gender, age, etc. dimensions; see below.",
+        "sectors": [
+          "health"
+        ]
+      }
+    },
+    "sector": {
+      "agriculture": {
+        "title": "Agriculture"
+      },
+      "biodiversity": {
+        "title": "Terrestrial biodiversity"
+      },
+      "biomes": {
+        "title": "Biomes"
+      },
+      "coastal": {
+        "title": "Coastal infrastructure"
+      },
+      "energy": {
+        "title": "Energy"
+      },
+      "forestry": {
+        "title": "Regional forests"
+      },
+      "health": {
+        "title": "Temperature-related mortality"
+      },
+      "lakes_global": {
+        "title": "Lakes (global)"
+      },
+      "lakes_local": {
+        "title": "Lakes (local)"
+      },
+      "marine-fishery_global": {
+        "title": "Fisheries and Marine Ecosystems (global)"
+      },
+      "marine-fishery_regional": {
+        "title": "Fisheries and Marine Ecosystems (regional)"
+      },
+      "permafrost": {
+        "title": "Permafrost"
+      },
+      "water_global": {
+        "title": "Water (global)"
+      },
+      "water_regional": {
+        "title": "Water (regional)"
+      },
+      "labour": {
+        "title": "Labour productivity"
+      },
+      "diarrhea": {
+        "title": "Diarrhoeal diseases"
+      }
+    },
+    "scenario": {
+      "model-evaluation-histsoc": {
+        "title": "model evaluation",
+        "subtitle": "histsoc",
+        "description": {
+          "climate": "no climate change before 1860, observed forcing afterwards; 1860 levels of CO2 until 1860 and based on observations afterwards",
+          "soc": "1860 levels of direct human influences until 1860, varying direct human influences according to observations afterwards"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "spin_up": {
+          "climate": "spinclim",
+          "soc": "1860soc"
+        },
+        "historical": {
+          "climate": "obsclim",
+          "soc": "histsoc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "labour",
+          "diarrhea"
+        ]
+      },
+      "model-evaluation-2015soc": {
+        "title": "model evaluation",
+        "subtitle": "2015soc",
+        "description": {
+          "climate": "no climate change before 1860, observed forcing afterwards; 1860 levels of CO2 until 1860 and based on observations afterward",
+          "soc": "fixed 2015 levels of direct human influences for the entire time period"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "spin_up": {
+          "climate": "spinclim",
+          "soc": "2015soc"
+        },
+        "historical": {
+          "climate": "obsclim",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "health",
+          "diarrhea",
+          "labour",
+          "coastal",
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "model-evaluation-nosoc": {
+        "title": "model evaluation",
+        "subtitle": "nosoc",
+        "description": {
+          "climate": "de-trended observational climate forcing (counterfactual \u201cno climate change\u201d situation)",
+          "soc": "1860 levels of direct human influences until 1860, varying direct human influences according to observations afterwards"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "spin_up": {
+          "climate": "picontrol",
+          "soc": "nosoc"
+        },
+        "historical": {
+          "climate": "picontrol",
+          "soc": "nosoc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "diarrhea",
+          "labour",
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "counterfactual-histsoc": {
+        "title": "counterfactual climate",
+        "subtitle": "histsoc",
+        "description": {
+          "climate": "de-trended observational climate forcing (counterfactual \u201cno climate change\u201d situation)",
+          "soc": "1860 levels of direct human influences until 1860, varying direct human influences according to observations afterwards"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "spin_up": "model evaluation experiment (histsoc) ",
+        "historical": {
+          "climate": "obsclim",
+          "soc": "histsoc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "labour",
+          "diarrhea"
+        ]
+      },
+      "counterfactual-2015soc": {
+        "title": "counterfactual climate",
+        "subtitle": "2015soc",
+        "description": {
+          "climate": "de-trended observational climate forcing (counterfactual \u201cno climate change\u201d situation)",
+          "soc": "fixed 2015 levels of direct human influences for the entire time period"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "spin_up": "model evaluation experiment (2015soc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "health",
+          "diarrhea",
+          "labour",
+          "coastal",
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "counterfactual-nosoc": {
+        "title": "counterfactual climate",
+        "subtitle": "nosoc",
+        "description": {
+          "climate": "de-trended observational climate forcing (counterfactual \u201cno climate change\u201d situation)",
+          "soc": "no direct human influences except for varying land use according to observations"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "spin_up": "model evaluation experiment (nosoc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "nosoc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "diarrhea",
+          "labour",
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "picontrol-histsoc": {
+        "title": "pre-industrial control",
+        "subtitle": "histsoc",
+        "description": {
+          "climate": "no climate change, pre-industrial CO2",
+          "soc": "varying management until 2015, then fixed at 2015 levels thereafter"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": {
+          "climate": "picontrol",
+          "soc": "1860soc"
+        },
+        "historical": {
+          "climate": "picontrol",
+          "soc": "histsoc"
+        },
+        "future": {
+          "climate": "picontrol",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "labour",
+          "diarrhea"
+        ]
+      },
+      "picontrol-2005soc": {
+        "title": "pre-industrial control",
+        "subtitle": "2005soc",
+        "description": {
+          "climate": "no climate change, pre-industrial CO2",
+          "soc": "fixed at 2015 levels for all periods"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": {
+          "climate": "picontrol",
+          "soc": "2015soc"
+        },
+        "historical": {
+          "climate": "picontrol",
+          "soc": "2015soc"
+        },
+        "future": {
+          "climate": "picontrol",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "health",
+          "diarrhea",
+          "labour",
+          "coastal",
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "picontrol-nosoc": {
+        "title": "pre-industrial control",
+        "subtitle": "nosoc",
+        "description": {
+          "climate": "no climate change, pre-industrial CO2",
+          "soc": "no direct human influences except for varying land use changes up to 2015"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": {
+          "climate": "picontrol",
+          "soc": "nosoc"
+        },
+        "historical": {
+          "climate": "picontrol",
+          "soc": "nosoc"
+        },
+        "future": {
+          "climate": "picontrol",
+          "soc": "nosoc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "forestry",
+          "permafrost",
+          "agriculture",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "biodiversity"
+        ]
+      },
+      "rcp26-histsoc": {
+        "title": "RCP2.6",
+        "subtitle": "histsoc",
+        "description": {
+          "climate": "RCP2.6 climate & CO2",
+          "soc": "varying management until 2015, then fixed at 2015 levels thereafter"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": "pre-industrial control experiment (histsoc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "histsoc"
+        },
+        "future": {
+          "climate": "rcp26",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "labour",
+          "diarrhea"
+        ]
+      },
+      "rcp26-2005soc": {
+        "title": "RCP2.6",
+        "subtitle": "2005soc",
+        "description": {
+          "climate": "RCP2.6 climate & CO2",
+          "soc": "fixed at 2015 levels for all periods"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": "pre-industrial control experiment (2005soc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "2015soc"
+        },
+        "future": {
+          "climate": "rcp26",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "health",
+          "diarrhea",
+          "labour",
+          "coastal",
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "rcp26-nosoc": {
+        "title": "RCP2.6",
+        "subtitle": "nosoc",
+        "description": {
+          "climate": "RCP2.6 climate & CO2",
+          "soc": "no direct human influences except for varying land use changes up to 2015"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": "pre-industrial control experiment (nosoc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "nosoc"
+        },
+        "future": {
+          "climate": "rcp26",
+          "soc": "nosoc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "forestry",
+          "permafrost",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "biodiversity"
+        ]
+      },
+      "rcp26-2015co2": {
+        "title": "RCP2.6",
+        "subtitle": "2015co2",
+        "description": {
+          "climate": "RCP2.6 climate, CO2 after 2015 fixed at 2015 levels",
+          "soc": "fixed at 2015 levels for all periods"
+        },
+        "input": {
+          "climate": "Climate",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": "pre-industrial control experiment (2005soc)",
+        "historical": "RCP2.6 experiment (2005soc)",
+        "future": {
+          "climate": "rcp26 2015co2",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "forestry",
+          "permafrost",
+          "biomes",
+          "agriculture"
+        ]
+      },
+      "rcp85-histsoc": {
+        "title": "RCP8.5",
+        "subtitle": "histsoc",
+        "description": {
+          "climate": "RCP2.6 climate & CO2",
+          "soc": "varying management until 2015, then fixed at 2015 levels thereafter"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": "pre-industrial control experiment (histsoc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "histsoc"
+        },
+        "future": {
+          "climate": "rcp85",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "labour",
+          "diarrhea"
+        ]
+      },
+      "rcp85-2005soc": {
+        "title": "RCP8.5",
+        "subtitle": "2005soc",
+        "description": {
+          "climate": "RCP2.6 climate & CO2",
+          "soc": "fixed at 2015 levels for all periods"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": "pre-industrial control experiment (2005soc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "2015soc"
+        },
+        "future": {
+          "climate": "rcp85",
+          "soc": "2015soc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "biomes",
+          "forestry",
+          "agriculture",
+          "health",
+          "diarrhea",
+          "labour",
+          "coastal",
+          "marine-fishery_global",
+          "marine-fishery_regional"
+        ]
+      },
+      "rcp85-nosoc": {
+        "title": "RCP8.5",
+        "subtitle": "nosoc",
+        "description": {
+          "climate": "RCP2.6 climate & CO2",
+          "soc": "no direct human influences except for varying land use changes up to 2015"
+        },
+        "input": {
+          "climate": "Climate & CO2",
+          "soc": "Human & LU"
+        },
+        "pre_industrial": "pre-industrial control experiment (nosoc)",
+        "historical": {
+          "climate": "historical",
+          "soc": "nosoc"
+        },
+        "future": {
+          "climate": "rcp85",
+          "soc": "nosoc"
+        },
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ],
+        "sectors": [
+          "water_global",
+          "water_regional",
+          "lakes_global",
+          "lakes_local",
+          "forestry",
+          "permafrost",
+          "marine-fishery_global",
+          "marine-fishery_regional",
+          "biodiversity"
+        ]
+      }
+    },
+    "r": {
+      "lower": {},
+      "central": {},
+      "upper": {}
+    },
+    "climate_variable": {
+      "hurs": {
+        "title": "Near-Surface Relative Humidity",
+        "unit": "%",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "huss": {
+        "title": "Near-Surface Specific Humidity",
+        "unit": "kg kg-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "pr": {
+        "title": "Precipitation",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "prsn": {
+        "title": "Snowfall Flux",
+        "unit": "kg m-2 s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "ps": {
+        "title": "Surface Air Pressure",
+        "unit": "Pa",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "rlds": {
+        "title": "Surface Downwelling Longwave Radiation",
+        "unit": "W m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "rsds": {
+        "title": "Surface Downwelling Shortwave Radiation",
+        "unit": "W m-2",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "sfcwind": {
+        "title": "Near-Surface Wind Speed",
+        "unit": "m s-1",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "tas": {
+        "title": "Near-Surface Air Temperature",
+        "unit": "K",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "tasmax": {
+        "title": "Daily Maximum Near-Surface Air Temperature",
+        "unit": "K",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      },
+      "tasmin": {
+        "title": "Daily Minimum Near-Surface Air Temperature",
+        "unit": "K",
+        "resolution": "0.5\u00b0 grid",
+        "frequency": [
+          "daily",
+          "monthly"
+        ]
+      }
+    },
+    "crop": {
+      "whe": {
+        "title": "Wheat",
+        "descripton": ""
+      },
+      "mai": {
+        "title": "Maize",
+        "descripton": ""
+      },
+      "soy": {
+        "title": "Soy",
+        "descripton": ""
+      },
+      "ric": {
+        "title": "Rice",
+        "descripton": ""
+      },
+      "bar": {
+        "title": "Barley",
+        "descripton": ""
+      },
+      "ben": {
+        "title": "Bean",
+        "descripton": ""
+      },
+      "cas": {
+        "title": "Cassava",
+        "descripton": ""
+      },
+      "cot": {
+        "title": "",
+        "descripton": ""
+      },
+      "euc": {
+        "title": "Eucalyptus",
+        "descripton": ""
+      },
+      "mgr": {
+        "title": "Managed grass",
+        "descripton": ""
+      },
+      "mil": {
+        "title": "Millet",
+        "descripton": ""
+      },
+      "mis": {
+        "title": "Miscanthus",
+        "descripton": ""
+      },
+      "nut": {
+        "title": "Groundnuts",
+        "descripton": ""
+      },
+      "pea": {
+        "title": "Field peas",
+        "descripton": ""
+      },
+      "pop": {
+        "title": "Poplar",
+        "descripton": ""
+      },
+      "pot": {
+        "title": "Potato",
+        "descripton": ""
+      },
+      "rap": {
+        "title": "Rapeseed",
+        "descripton": ""
+      },
+      "ri2": {
+        "title": "",
+        "descripton": ""
+      },
+      "rye": {
+        "title": "Rye",
+        "descripton": ""
+      },
+      "sgb": {
+        "title": "Sugar beet",
+        "descripton": ""
+      },
+      "sor": {
+        "title": "Sorghum",
+        "descripton": ""
+      },
+      "sug": {
+        "title": "Sugarcane",
+        "descripton": ""
+      },
+      "sun": {
+        "title": "Sunflower",
+        "descripton": ""
+      }
+    },
+    "timestep": {
+      "3hr": {},
+      "daily": {},
+      "monthly": {},
+      "annual": {},
+      "seasonal": {
+        "description": "per growing season",
+        "sectors": [
+          "agriculture"
+        ]
+      },
+      "30year-mean": {
+        "description": "30-year period centered around 1995, 1980 \u2013 2009",
+        "sectors": [
+          "biodiversity"
+        ]
+      }
+    },
+    "harmonization": {
+      "default": {
+        "title": "Default",
+        "description": "Model should use their individual \u201cbest representation\u201d of the historical period with regard to sowing dates, harvesting dates, fertilizer application rates and crop varieties."
+      },
+      "fullharm": {
+        "title": "Fully harmonized",
+        "description": "Simulations based on prescribed \u201cpresent day\u201d fertilization rates (available for download) and fixed planting and harvesting dates (also available for download). Modelers should have planting as closely as possible to these dates, but it may be admissible to use these dates as indicators for planting windows (depending on model specifics)."
+      },
+      "harmnon": {
+        "title": "Harmonized seasons with no N constraints",
+        "description": "For models with an explicit description of the nitrogen cycle: harmnon simulations should be run with nitrogen stress turned off completely or (if that\u2019s not possible) with very high N application rates to make model results comparable between those GGCMs that have explicit N dynamics and those that do not. For models without the nitrogen cycle: harmnon and fullharm simulations are the same and do not need to be duplicated."
+      }
+    },
+    "climate_scenario": {
+      "picontrol": {
+        "description": "Pre-industrial climate and 286ppm CO2 concentration. The climate data for the entire period (1661-2299) are unique \u2013 no (or little) recycling of data has taken place."
+      },
+      "historical": {
+        "description": "Historical climate and CO2 concentration."
+      },
+      "rcp26": {
+        "description": "Future climate and CO2 concentration from RCP2.6."
+      },
+      "rcp85": {
+        "description": "Future climate and CO2 concentration from RCP8.5."
+      },
+      "2015co2": {
+        "description": "CO2 concentration fixed at 2005 levels at 378.81ppm."
+      }
+    },
+    "climate_forcing": {
+      "wfdei": {
+        "title": "WATCH-WFDEI",
+        "reanalysis": "ERA-40, ERA-Interim",
+        "years": "1901-2016",
+        "resolution": "0.5\u00b0 grid Land",
+        "bias_target": "CRU, GPCC",
+        "priority": "1",
+        "comments": "Combined forcing file (WFD 1901-1978, WFDEI 1979-2016) will be provided by ISIMIP. WFDEI precipitation and snowfall data are those corrected with GPCC. NOTE a discontinuity in the data exists at the transition from WATCH to WFDEI, and results must be interpreted with caution.",
+        "reference": "Weedon, et al., 2014",
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ]
+      },
+      "w5e5": {
+        "title": "GSWP3-W5E5",
+        "reanalysis": "ERA5",
+        "years": "1901-2016",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "CRU, GPCC, GPCP",
+        "priority": "2",
+        "comments": "Combined forcing file (homogenized GSWP3 1901-1978, W5E5 1979-2016) will be provided by ISIMIP. To minimize discontinuities at the 1978/1979 transition, GSWP3 data were homogenized with W5E5 data using the ISIMIP2BASD v2.2 bias adjustment method.",
+        "reference": "Lange, et al., 2020",
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ]
+      },
+      "ewembi": {
+        "title": "GSWP3-EWEMBI",
+        "reanalysis": "ERA-Interim",
+        "years": "1901-2016",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "CRU, GPCC, GPCP, SRB",
+        "priority": "3",
+        "comments": "Combined forcing file (homogenized GSWP3 1901-1978, EWEMBI 1979-2016) will be provided by ISIMIP. To minimize discontinuities at the 1978/1979 transition, GSWP3 data were homogenized with EWEMBI data using the ISIMIP2BASD v2.2 bias adjustment method.",
+        "reference": "Lange, et al., 2020",
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ]
+      },
+      "gswp3": {
+        "title": "GSWP3",
+        "reanalysis": "20CR",
+        "years": "1901-2010",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "CRU, GPCC, GPCP, SRB, CPC-Unified",
+        "priority": "4",
+        "comments": "Based on dynamical downscaling. Further details on the global dynamical downscaling method are given in (Yoshimura & Kanamitsu, 2008) (Yoshimura & Kanamitsu, 2013).",
+        "reference": "",
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ]
+      },
+      "princeton": {
+        "title": "PGMFD v.2",
+        "reanalysis": "NCEP/NCAR Reanalysis 1",
+        "years": "1901-2012",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "CRU, SRB, TRMM, GPCP, WMO validated against GSWP2",
+        "priority": "5",
+        "comments": "",
+        "reference": "Sheffield, Goteti, & Wood, 2006",
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ]
+      },
+      "watch": {
+        "title": "WATCH (WFD)",
+        "reanalysis": "ERA-40",
+        "years": "1901-2001",
+        "resolution": "0.5\u00b0 grid Land",
+        "bias_target": "CRU, GPCC",
+        "priority": "6",
+        "comments": "",
+        "reference": "Weedon, et al., 2011",
+        "simulation_rounds": [
+          "ISIMIP3a"
+        ]
+      },
+      "ipsl-cm5a-lr": {
+        "title": "IPSL-CM5A-LR",
+        "reanalysis": "",
+        "years": "1661-2299",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "EWEMBI",
+        "priority": "1",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP2b"
+        ]
+      },
+      "gfdl-esm2m": {
+        "title": "GFDL-ESM2M",
+        "reanalysis": "",
+        "years": "1661-2099",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "EWEMBI",
+        "priority": "2",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP2b"
+        ]
+      },
+      "miroc5": {
+        "title": "MIROC5",
+        "reanalysis": "",
+        "years": "1661-2299",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "EWEMBI",
+        "priority": "3",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP2b"
+        ]
+      },
+      "hadgem2-es": {
+        "title": "HadGEM2-ES",
+        "reanalysis": "",
+        "years": "1661-2299",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "EWEMBI",
+        "priority": "4",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP2b"
+        ]
+      },
+      "gfdl-esm4": {
+        "title": "GFDL-ESM4",
+        "reanalysis": "",
+        "years": "1601-2100",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "w5e5",
+        "priority": "1",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ]
+      },
+      "mpi-esm1-2-hr": {
+        "title": "MPI-ESM1-2-HR",
+        "reanalysis": "",
+        "years": "1601-2100",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "w5e5",
+        "priority": "1",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ]
+      },
+      "mri-esm2-0": {
+        "title": "MRI-ESM2-0",
+        "reanalysis": "",
+        "years": "1601-2100",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "w5e5",
+        "priority": "1",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ]
+      },
+      "ukesm1-0-ll": {
+        "title": "UKESM1-0-LL",
+        "reanalysis": "",
+        "years": "1601-2100",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "w5e5",
+        "priority": "1",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ]
+      },
+      "ipsl-cm6a-lr": {
+        "title": "IPSL-CM6A-LR",
+        "reanalysis": "",
+        "years": "1601-2100",
+        "resolution": "0.5\u00b0 grid Land + Ocean",
+        "bias_target": "w5e5",
+        "priority": "1",
+        "comments": "",
+        "simulation_rounds": [
+          "ISIMIP3b"
+        ]
+      }
+    },
+    "simulation_round": {
+      "ISIMIP3a": {
+        "title": "ISIMIP3a"
+      },
+      "ISIMIP3b": {
+        "title": "ISIMIP3b"
+      }
+    }
+  }
+}
